@@ -1,0 +1,10 @@
+<AccionesDefiniticavas>
+	<table>invoice</table>
+	<sql>SELECT * FROM laicon20f.invoice where id = 1041;</sql>
+	<inconsistencia>id 1041 no existe en la tabla supplier</inconsistencia>
+	<mensaje>No hay elementos cargados ni tenían plata. Se eliminan de laicon la factura REPC359550. De la factura 522 se actualizó el supplier pero no dejo actualizar los elementos que ya estanban boprrado. Adjunto archivo</mensaje>
+	<accion>Actualizar elementos con invoice 1041 a null<accion>
+	<sql-accion>update laicon34G.element set invoice = null where invoice = 1041;</slq-accion>
+	<ejecutada>Y</ejecutada>
+		
+</AccionesDefinitivas>

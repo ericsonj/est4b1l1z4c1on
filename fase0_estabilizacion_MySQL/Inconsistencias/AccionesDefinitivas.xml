@@ -1,0 +1,45 @@
+<AccionesDefinitivas>
+
+  <table></table>
+  <sql></sql>
+  <inconsistencia></inconsistencia>
+  <mensaje></mensaje>
+  <accion></accion>
+  <sql-accion></slq-accion>
+  <ejecutada></ejecutada>
+
+  <table>invoice</table>
+  <sql>SELECT * FROM laicon20f.invoice where id = 1041;</sql>
+  <inconsistencia>id 1041 no existe en la tabla invoice</inconsistencia>
+  <mensaje>
+    No hay elementos cargados ni tenían plata. Se eliminan de laicon la factura REPC359550. De la factura 522 se actualizó el supplier pero no dejo actualizar los elementos que ya estanban boprrado. Adjunto archivo
+  </mensaje>
+  <accion>Actualizar elementos con invoice 1041 a null</accion>
+  <sql-accion>update laicon34G.element set invoice = null where invoice = 1041;</slq-accion>
+  <ejecutada>Y</ejecutada>
+
+  <table>invoice</table>
+  <sql>SELECT * FROM laicon20f.invoice where id = 927;</sql>
+  <inconsistencia>id 927 no existe en la tabla invoice</inconsistencia>
+  <mensaje>no se encuentran registros SOLUCIONADO</mensaje>
+  <accion>ninguna</accion>
+  <sql-accion>ninguna</slq-accion>
+  <ejecutada>N</ejecutada>
+
+  <table>geographic_location</table>
+  <sql>select * from laicon20f.geographic_location where code in ('WAR02BG_NAC', 'WAR04BG_NAC');</sql>
+  <inconsistencia>campo con region 0</inconsistencia>
+  <mensaje>
+    Se crea la regional llamada ?Platform?, hay que asiganrle a la geographic location de platform, esta regional.
+    Eliminar de la tabal location 'WAR98BG'. Eliminar de la tabla geographic location las bodegas 'WAR02BG_NAC', 'WAR04BG_NAC'.
+    Actualmente est�n borradas en la tabla location y no se borraron antes en la de geographic.
+  </mensaje>
+  <accion>eliminar 'WAR98BG' de tabla location y eliminar 'WAR02BG_NAC', 'WAR04BG_NAC' de tabla geographic_location</accion>
+  <sql-accion>
+    delete from laicon34G.location where code = 'WAR98BG';
+    delete from laicon34G.geographic_location where code = 'WAR02BG_NAC';
+    delete from laicon34G.geographic_location where code = 'WAR04BG_NAC';
+  </slq-accion>
+  <ejecutada>N</ejecutada>
+
+</AccionesDefinitivas>

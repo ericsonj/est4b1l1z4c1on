@@ -1,0 +1,208 @@
+1;16:56:53;update laicon34G.element_screenshot_data set element_classification = null where element_classification = 0;24209764 row(s) affected Rows matched: 24209764  Changed: 24209764  Warnings: 0;280.217 sec
+2;17:03:27;update laicon34G.element_screenshot_data set internal_location_id = null where internal_location_id = 0;36462980 row(s) affected Rows matched: 36462980  Changed: 36462980  Warnings: 0;298.982 sec
+3;17:12:29;update laicon34G.element_screenshot_data set awb = null where awb = 0;17351202 row(s) affected Rows matched: 17351202  Changed: 17351202  Warnings: 0;213.238 sec
+4;17:16:02;update laicon34G.element_screenshot_data set invoice = null where invoice = 0;9657448 row(s) affected Rows matched: 9657448  Changed: 9657448  Warnings: 0;144.141 sec
+5;17:18:27;update laicon34G.element_screenshot_data set element_category_asset = null where element_category_asset = 0;257109 row(s) affected Rows matched: 257109  Changed: 257109  Warnings: 0;61.478 sec
+6;17:19:28;update laicon34G.element_screenshot_data set element_state = null where element_state = 0;1909543 row(s) affected Rows matched: 1909543  Changed: 1909543  Warnings: 0;75.177 sec
+7;17:20:43;update laicon34G.element_screenshot_data set element_type_asset = null where element_type_asset = 0;338736 row(s) affected Rows matched: 338736  Changed: 338736  Warnings: 0;71.325 sec
+8;17:36:47;update laicon34G.element set element_classification = null where element_classification = 0;0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0;0.00036 sec
+9;17:37:26;update laicon34G.reenabled_element set element_classification = null where element_classification = 0;0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0;0.0036 sec
+10;17:42:19;update laicon34G.desktop_inventory_element set internal_location_id = null where internal_location_id = 0;2386340 row(s) affected Rows matched: 2386340  Changed: 2386340  Warnings: 0;7.508 sec
+11;18:01:39;update laicon34G.desktop_inventory_element_result set internal_location_id = null where internal_location_id = 0;1537284 row(s) affected Rows matched: 1537284  Changed: 1537284  Warnings: 0;19.907 sec
+12;18:01:59;update laicon34G.desktop_inventory_partial_inventory set internal_location = null where internal_location = 0;44 row(s) affected Rows matched: 44  Changed: 44  Warnings: 0;0.079 sec
+13;18:01:59;update laicon34G.desktop_inventory_process_result_difference_detail set internal_location_id = null where internal_location_id = 0;144642 row(s) affected Rows matched: 144642  Changed: 144642  Warnings: 0;1.570 sec
+14;18:02:00;update laicon34G.desktop_inventory_process_result_missing_detail set internal_location_id = null where internal_location_id = 0;84436 row(s) affected Rows matched: 84436  Changed: 84436  Warnings: 0;0.937 sec
+15;18:02:01;update laicon34G.desktop_inventory_process_result_new_detail set internal_location_id = null where internal_location_id = 0;49768 row(s) affected Rows matched: 49768  Changed: 49768  Warnings: 0;0.552 sec
+16;18:02:02;update laicon34G.laicon_inventory_register_unknown set element_internal_location_id = null where element_internal_location_id = 0;10877 row(s) affected Rows matched: 10877  Changed: 10877  Warnings: 0;0.054 sec
+17;18:02:02;update laicon34G.quality_inventory_element set internal_location_id = null where internal_location_id = 0;70718 row(s) affected Rows matched: 70718  Changed: 70718  Warnings: 0;0.298 sec
+18;18:02:02;update laicon34G.element set awb =  null where awb = 0;372635 row(s) affected Rows matched: 372635  Changed: 372635  Warnings: 0;78.588 sec
+19;18:03:21;update laicon34G.nationalization set awb = null where awb = 0;1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.079 sec
+20;18:03:21;update laicon34G.reenabled_element set awb =  null where awb = 0;493 row(s) affected Rows matched: 493  Changed: 493  Warnings: 0;0.0049 sec
+21;18:03:21;update laicon34G.element set invoice = null where invoice = 0;172806 row(s) affected Rows matched: 172806  Changed: 172806  Warnings: 0;34.743 sec
+22;18:03:56;update laicon34G.nationalization set invoice = null where invoice = 0;1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.00019 sec
+23;18:03:56;update laicon34G.desktop_inventory_element set element_category_asset = null where element_category_asset = 0;363 row(s) affected Rows matched: 363  Changed: 363  Warnings: 0;0.301 sec
+24;18:03:56;update laicon34G.desktop_inventory_element_result set element_category_asset = null where element_category_asset = 0;118 row(s) affected Rows matched: 118  Changed: 118  Warnings: 0;0.491 sec
+25;18:03:57;update laicon34G.desktop_inventory_process_result_new_detail set element_category_asset = null where  element_category_asset = 0;48 row(s) affected Rows matched: 48  Changed: 48  Warnings: 0;0.123 sec
+26;18:03:57;update laicon34G.element_type_asset set default_element_category_asset = null where default_element_category_asset = 0;19 row(s) affected Rows matched: 19  Changed: 19  Warnings: 0;0.343 sec
+27;18:03:57;update laicon34G.quality_inventory_element_result set element_category_asset = null where element_category_asset = 0;2 row(s) affected Rows matched: 2  Changed: 2  Warnings: 0;1.319 sec
+28;18:03:58;update laicon34G.reenabled_element set element_category_asset = null where element_category_asset = 0;1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.135 sec
+29;18:03:58;update laicon34G.element set element_state =  null where element_state = 0;32663 row(s) affected Rows matched: 32663  Changed: 32663  Warnings: 0;5.357 sec
+30;18:04:04;update laicon34G.reenabled_element set element_state = null where element_state = 0;10 row(s) affected Rows matched: 10  Changed: 10  Warnings: 0;0.0037 sec
+31;18:04:04;update laicon34G.desktop_inventory_element set element_type_asset = null where element_type_asset = 0;2126 row(s) affected Rows matched: 2126  Changed: 2126  Warnings: 0;0.265 sec
+32;18:04:04;update laicon34G.desktop_inventory_element_result set element_type_asset = null where element_type_asset = 0;337 row(s) affected Rows matched: 337  Changed: 337  Warnings: 0;0.352 sec
+33;18:04:04;update laicon34G.desktop_inventory_process_result_difference_detail set element_type_asset = null where element_type_asset = 0;10 row(s) affected Rows matched: 10  Changed: 10  Warnings: 0;0.127 sec
+34;18:04:05;update laicon34G.desktop_inventory_process_result_new_detail set element_type_asset = null where element_type_asset = 0;162 row(s) affected Rows matched: 162  Changed: 162  Warnings: 0;0.164 sec
+35;18:04:05;update laicon34G.element_model set default_element_type_asset = null where default_element_type_asset = 0;7 row(s) affected Rows matched: 7  Changed: 7  Warnings: 0;0.719 sec
+36;18:04:05;update laicon34G.quality_inventory_element set element_type_asset = null where element_type_asset = 0;66 row(s) affected Rows matched: 66  Changed: 66  Warnings: 0;0.064 sec
+37;18:04:05;update laicon34G.quality_inventory_element_result set element_type_asset = null where element_type_asset = 0;140 row(s) affected Rows matched: 140  Changed: 140  Warnings: 0;0.031 sec
+38;18:04:06;update laicon34G.reenabled_element set element_type_asset = null where element_type_asset = 0;1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.048 sec
+39;18:33:13;ALTER TABLE `laicon34G`.`desktop_inventory_excluded_field` CHANGE COLUMN `desktop_inventory_grouping` `desktop_inventory_grouping` INT(11);16 row(s) affected Records: 16  Duplicates: 0  Warnings: 0;0.225 sec
+40;18:33:14;update laicon34G.desktop_inventory_excluded_field set desktop_inventory_grouping = 1 where desktop_inventory_grouping = -1;8 row(s) affected Rows matched: 8  Changed: 8  Warnings: 0;0.00038 sec
+41;18:33:14;update laicon34G.element_transfer_order set order_priority_type = null where order_priority_type = 0;5332 row(s) affected Rows matched: 5332  Changed: 5332  Warnings: 0;0.694 sec
+42;18:33:14;update laicon34G.element_request set order_priority_type = null where order_priority_type = 0;465 row(s) affected Rows matched: 465  Changed: 465  Warnings: 0;0.634 sec
+43;18:33:15;update laicon34G.location set region = null where region = 0;3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0;0.056 sec
+44;18:33:15;update laicon34G.element set internal_location_id = null where internal_location_id = 0;784798 row(s) affected Rows matched: 784798  Changed: 784798  Warnings: 0;148.170 sec
+45;18:35:43;update laicon34G.element set containing_element = null where containing_element = 0;757384 row(s) affected Rows matched: 757384  Changed: 757384  Warnings: 0;208.920 sec
+46;18:39:12;update laicon34G.element set element_type_asset = null where element_type_asset = 0;4965 row(s) affected Rows matched: 4965  Changed: 4965  Warnings: 0;5.757 sec
+47;18:39:18;update laicon34G.element set login_update_installation_site = null where login_update_installation_site = '_FOUR';7 row(s) affected Rows matched: 7  Changed: 7  Warnings: 0;0.895 sec
+48;18:39:19;update laicon34G.element set location_asigned = 'BAR0190' where location_asigned = 'Poste Los Nogales II (BAR0190)';2 row(s) affected Rows matched: 2  Changed: 2  Warnings: 0;6.560 sec
+49;18:39:25;update laicon34G.element set location_asigned = 'BAR0411' where location_asigned = 'Ciudad Modesto II  (BAR0411)';0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0;4.332 sec
+50;18:39:30;update laicon34G.element set source_element = null where source_element = 0;791373 row(s) affected Rows matched: 791373  Changed: 791373  Warnings: 0;155.702 sec
+51;18:42:05;update laicon34G.forgotten_password set login = 'JN1102794815' where login = 'JN1102794815 ';5 row(s) affected Rows matched: 5  Changed: 5  Warnings: 0;0.217 sec
+52;18:42:06;update laicon34G.geographic_location set responsible_user = 'Andres.hernandez' where responsible_user = 'andres.hernandez';2 row(s) affected Rows matched: 77  Changed: 2  Warnings: 0;0.444 sec
+53;18:42:06;update laicon34G.invoice set supplier = null where supplier = 0;5 row(s) affected Rows matched: 5  Changed: 5  Warnings: 0;0.157 sec
+54;10:11:19;ALTER TABLE `laicon34G`.`mic_code`   CHANGE COLUMN `mic_batch` `mic_batch` INT(10);0 row(s) affected Records: 0  Duplicates: 0  Warnings: 0;41.455 sec
+55;10:12:00;update laicon34G.mic_code set mic_batch = null where mic_batch = 0;4037 row(s) affected Rows matched: 4037  Changed: 4037  Warnings: 0;0.583 sec
+56;10:12:01;update laicon34G.mic_code set assigned_element = null where assigned_element = 0;763790 row(s) affected Rows matched: 763790  Changed: 763790  Warnings: 0;67.152 sec
+57;10:13:08;ALTER TABLE `laicon34G`.`mic_code`   CHANGE COLUMN `assigned_element` `assigned_element` INT(11);0 row(s) affected Records: 0  Duplicates: 0  Warnings: 0;0.00067 sec
+58;10:13:08;update laicon34G.remote_inventory_mail_list set region = null where region = 0;3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0;0.102 sec
+59;10:13:08;update laicon34G.fault_report_struct_detail set fault_element_field = null where fault_element_field = 0;53 row(s) affected Rows matched: 53  Changed: 53  Warnings: 0;0.234 sec
+60;10:13:08;update laicon34G.external_location set external_location_type = null where external_location_type = 0;1491 row(s) affected Rows matched: 1491  Changed: 1491  Warnings: 0;0.282 sec
+61;10:50:20;update laicon34G.desktop_inventory set login = 'AF3086222' where  login = 'af3086222';114 row(s) affected Rows matched: 351  Changed: 114  Warnings: 0;0.119 sec
+62;10:50:20;update laicon34G.desktop_inventory set login = 'Andres.hernandez' where  login = 'andres.hernandez';22 row(s) affected Rows matched: 22  Changed: 22  Warnings: 0;0.00081 sec
+63;10:50:20;update laicon34G.desktop_inventory set login = 'AO79049480' where  login = 'ao79049480';15 row(s) affected Rows matched: 90  Changed: 15  Warnings: 0;0.0015 sec
+64;10:50:20;update laicon34G.desktop_inventory set login = 'AO94228856' where  login = 'ao94228856';43 row(s) affected Rows matched: 54  Changed: 43  Warnings: 0;0.0015 sec
+65;10:50:20;update laicon34G.desktop_inventory set login = 'AP79819342' where  login = 'ap79819342';1 row(s) affected Rows matched: 88  Changed: 1  Warnings: 0;0.00031 sec
+66;10:50:20;update laicon34G.desktop_inventory set login = 'CC6105541' where  login = 'cc6105541';224 row(s) affected Rows matched: 262  Changed: 224  Warnings: 0;0.022 sec
+67;10:50:20;update laicon34G.desktop_inventory set login = 'CC94287500' where  login = 'cc94287500';54 row(s) affected Rows matched: 202  Changed: 54  Warnings: 0;0.0035 sec
+68;10:50:20;update laicon34G.desktop_inventory set login = 'cesar.estevez' where  login = 'CESAR.ESTEVEZ';19 row(s) affected Rows matched: 188  Changed: 19  Warnings: 0;0.0012 sec
+69;10:50:20;update laicon34G.desktop_inventory set login = 'CG94317021' where  login = 'cg94317021';43 row(s) affected Rows matched: 43  Changed: 43  Warnings: 0;0.00090 sec
+70;10:50:20;update laicon34G.desktop_inventory set login = 'CJ72271212' where  login = 'cj72271212';1 row(s) affected Rows matched: 68  Changed: 1  Warnings: 0;0.00035 sec
+71;10:50:20;update laicon34G.desktop_inventory set login = 'CL80759750' where  login = 'cl80759750';82 row(s) affected Rows matched: 171  Changed: 82  Warnings: 0;0.0019 sec
+72;10:50:20;update laicon34G.desktop_inventory set login = 'CM1082872401' where  login = 'cm1082872401';100 row(s) affected Rows matched: 109  Changed: 100  Warnings: 0;0.0014 sec
+73;10:50:20;update laicon34G.desktop_inventory set login = 'CM72193408' where  login = 'cm72193408';46 row(s) affected Rows matched: 46  Changed: 46  Warnings: 0;0.00071 sec
+74;10:50:20;update laicon34G.desktop_inventory set login = 'CR7574299' where  login = 'cr7574299';35 row(s) affected Rows matched: 35  Changed: 35  Warnings: 0;0.00078 sec
+75;10:50:20;update laicon34G.desktop_inventory set login = 'DJ1036625806' where  login = 'dj1036625806';36 row(s) affected Rows matched: 61  Changed: 36  Warnings: 0;0.00080 sec
+76;10:50:20;update laicon34G.desktop_inventory set login = 'DM1077438122' where  login = 'dm1077438122';23 row(s) affected Rows matched: 41  Changed: 23  Warnings: 0;0.00083 sec
+77;10:50:20;update laicon34G.desktop_inventory set login = 'DS1098603917' where  login = 'ds1098603917';4 row(s) affected Rows matched: 159  Changed: 4  Warnings: 0;0.00060 sec
+78;10:50:20;update laicon34G.desktop_inventory set login = 'EM8526128' where  login = 'em8526128';39 row(s) affected Rows matched: 132  Changed: 39  Warnings: 0;0.0022 sec
+79;10:50:20;update laicon34G.desktop_inventory set login = 'EV72287302' where  login = 'ev72287302';76 row(s) affected Rows matched: 101  Changed: 76  Warnings: 0;0.0014 sec
+80;10:50:20;update laicon34G.desktop_inventory set login = 'FB80116681' where  login = 'fb80116681';76 row(s) affected Rows matched: 78  Changed: 76  Warnings: 0;0.0012 sec
+81;10:50:20;update laicon34G.desktop_inventory set login = 'FS16658896' where  login = 'fs16658896';105 row(s) affected Rows matched: 152  Changed: 105  Warnings: 0;0.0019 sec
+82;10:50:20;update laicon34G.desktop_inventory set login = 'GC1094889215' where  login = 'gc1094889215';1 row(s) affected Rows matched: 194  Changed: 1  Warnings: 0;0.00097 sec
+83;10:50:20;update laicon34G.desktop_inventory set login = 'GO80037050' where  login = 'go80037050';110 row(s) affected Rows matched: 133  Changed: 110  Warnings: 0;0.0023 sec
+84;10:50:20;update laicon34G.desktop_inventory set login = 'HA79687310' where  login = 'ha79687310';61 row(s) affected Rows matched: 75  Changed: 61  Warnings: 0;0.00095 sec
+85;10:50:20;update laicon34G.desktop_inventory set login = 'HM1123621197' where  login = 'hm1123621197';200 row(s) affected Rows matched: 221  Changed: 200  Warnings: 0;0.0030 sec
+86;10:50:20;update laicon34G.desktop_inventory set login = 'HN71229150' where  login = 'hn71229150';42 row(s) affected Rows matched: 47  Changed: 42  Warnings: 0;0.00083 sec
+87;10:50:20;update laicon34G.desktop_inventory set login = 'HP2969344' where  login = 'hp2969344';155 row(s) affected Rows matched: 164  Changed: 155  Warnings: 0;0.0023 sec
+88;10:50:20;update laicon34G.desktop_inventory set login = 'JC1083867636' where  login = 'jc1083867636';347 row(s) affected Rows matched: 352  Changed: 347  Warnings: 0;0.0075 sec
+89;10:50:20;update laicon34G.desktop_inventory set login = 'JD1128053765' where  login = 'jd1128053765';203 row(s) affected Rows matched: 203  Changed: 203  Warnings: 0;0.0053 sec
+90;10:50:20;update laicon34G.desktop_inventory set login = 'JD19471339' where  login = 'Jd19471339';26 row(s) affected Rows matched: 58  Changed: 26  Warnings: 0;0.00055 sec
+91;10:50:20;update laicon34G.desktop_inventory set login = 'JD72346722' where  login = 'jd72346722';202 row(s) affected Rows matched: 202  Changed: 202  Warnings: 0;0.0032 sec
+92;10:50:20;update laicon34G.desktop_inventory set login = 'JG8649737' where  login = 'jg8649737';4 row(s) affected Rows matched: 160  Changed: 4  Warnings: 0;0.00071 sec
+93;10:50:20;update laicon34G.desktop_inventory set login = 'JL9690502' where  login = 'jl9690502';32 row(s) affected Rows matched: 32  Changed: 32  Warnings: 0;0.00053 sec
+94;10:50:20;update laicon34G.desktop_inventory set login = 'JM10255349' where  login = 'jm10255349';20 row(s) affected Rows matched: 57  Changed: 20  Warnings: 0;0.00059 sec
+95;10:50:20;update laicon34G.desktop_inventory set login = 'JM79694731' where  login = 'jm79694731';44 row(s) affected Rows matched: 44  Changed: 44  Warnings: 0;0.00084 sec
+96;10:50:20;update laicon34G.desktop_inventory set login = 'JN10173494' where  login = 'jn10173494';122 row(s) affected Rows matched: 139  Changed: 122  Warnings: 0;0.0019 sec
+97;10:50:20;update laicon34G.desktop_inventory set login = 'JN1102794815' where  login = 'jn1102794815';58 row(s) affected Rows matched: 58  Changed: 58  Warnings: 0;0.00080 sec
+98;10:50:20;update laicon34G.desktop_inventory set login = 'jose.mejia' where  login = 'JOSE.MEJIA';19 row(s) affected Rows matched: 401  Changed: 19  Warnings: 0;0.0013 sec
+99;10:50:20;update laicon34G.desktop_inventory set login = 'JP91160612' where  login = 'jp91160612';52 row(s) affected Rows matched: 113  Changed: 52  Warnings: 0;0.0011 sec
+100;10:50:20;update laicon34G.desktop_inventory set login = 'JR1129569262' where  login = 'jr1129569262';248 row(s) affected Rows matched: 248  Changed: 248  Warnings: 0;0.0049 sec
+101;10:50:20;update laicon34G.desktop_inventory set login = 'JR5777936' where  login = 'jr5777936';29 row(s) affected Rows matched: 33  Changed: 29  Warnings: 0;0.00038 sec
+102;10:50:20;update laicon34G.desktop_inventory set login = 'JR79430814' where  login = 'jr79430814';15 row(s) affected Rows matched: 86  Changed: 15  Warnings: 0;0.00046 sec
+103;10:50:20;update laicon34G.desktop_inventory set login = 'JS80878610' where  login = 'js80878610';58 row(s) affected Rows matched: 58  Changed: 58  Warnings: 0;0.00078 sec
+104;10:50:20;update laicon34G.desktop_inventory set login = 'JV1130605935' where  login = 'jv1130605935';133 row(s) affected Rows matched: 163  Changed: 133  Warnings: 0;0.0020 sec
+105;10:50:20;update laicon34G.desktop_inventory set login = 'JV14324799' where  login = 'jv14324799';31 row(s) affected Rows matched: 31  Changed: 31  Warnings: 0;0.00034 sec
+106;10:50:20;update laicon34G.desktop_inventory set login = 'LD8648664' where  login = 'ld8648664';41 row(s) affected Rows matched: 312  Changed: 41  Warnings: 0;0.0011 sec
+107;10:50:20;update laicon34G.desktop_inventory set login = 'LE12753612' where  login = 'le12753612';46 row(s) affected Rows matched: 91  Changed: 46  Warnings: 0;0.00064 sec
+108;10:50:20;update laicon34G.desktop_inventory set login = 'LQ11318319' where  login = 'lq11318319';3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0;0.00017 sec
+109;10:50:20;update laicon34G.desktop_inventory set login = 'luis.salamanca' where  login = 'Luis.salamanca';26 row(s) affected Rows matched: 207  Changed: 26  Warnings: 0;0.00085 sec
+110;10:50:20;update laicon34G.desktop_inventory set login = 'mario.roman' where  login = 'MARIO.ROMAN';1 row(s) affected Rows matched: 160  Changed: 1  Warnings: 0;0.00034 sec
+111;10:50:20;update laicon34G.desktop_inventory set login = 'MC79582235' where  login = 'mc79582235';281 row(s) affected Rows matched: 310  Changed: 281  Warnings: 0;0.0043 sec
+112;10:50:20;update laicon34G.desktop_inventory set login = 'NP80877866' where  login = 'np80877866';37 row(s) affected Rows matched: 64  Changed: 37  Warnings: 0;0.00068 sec
+113;10:50:20;update laicon34G.desktop_inventory set login = 'RP87103172' where  login = 'rp87103172';1 row(s) affected Rows matched: 74  Changed: 1  Warnings: 0;0.00025 sec
+114;10:50:20;update laicon34G.desktop_inventory set login = 'RR1111755541' where  login = 'rr1111755541';58 row(s) affected Rows matched: 70  Changed: 58  Warnings: 0;0.0017 sec
+115;10:50:20;update laicon34G.desktop_inventory set login = 'SC1022383553' where  login = 'sc1022383553';2 row(s) affected Rows matched: 100  Changed: 2  Warnings: 0;0.00028 sec
+116;10:50:20;update laicon34G.desktop_inventory set login = 'SR79241975' where  login = 'sr79241975';31 row(s) affected Rows matched: 49  Changed: 31  Warnings: 0;0.00047 sec
+117;10:50:20;update laicon34G.desktop_inventory set login = 'WS11510831' where  login = 'ws11510831';70 row(s) affected Rows matched: 84  Changed: 70  Warnings: 0;0.0014 sec
+118;10:50:20;update laicon34G.desktop_inventory set login = 'WV1022937208' where  login = 'wv1022937208';19 row(s) affected Rows matched: 19  Changed: 19  Warnings: 0;0.00034 sec
+119;10:50:20;update laicon34G.desktop_inventory set login = 'YS79414221' where  login = 'ys79414221';1 row(s) affected Rows matched: 158  Changed: 1  Warnings: 0;0.00033 sec
+120;10:50:20;update laicon34G.infrastructure_element set location = 'ATL0019' where location = 'atl0019';1 row(s) affected Rows matched: 10  Changed: 1  Warnings: 0;0.076 sec
+121;10:50:21;update laicon34G.infrastructure_element set location = 'ATL0027' where location = 'atl0027';1 row(s) affected Rows matched: 10  Changed: 1  Warnings: 0;0.021 sec
+122;10:50:21;update laicon34G.infrastructure_element set location = 'BAR0009' where location = 'bar0009';1 row(s) affected Rows matched: 14  Changed: 1  Warnings: 0;0.021 sec
+123;10:50:21;update laicon34G.infrastructure_element set location = 'COR0018' where location = 'cor0018';1 row(s) affected Rows matched: 9  Changed: 1  Warnings: 0;0.016 sec
+124;10:50:21;update laicon34G.infrastructure_element set location = 'CUN0026' where location = 'cun0026';1 row(s) affected Rows matched: 10  Changed: 1  Warnings: 0;0.0016 sec
+125;10:50:21;update laicon34G.infrastructure_element set location = 'RVAC0035' where location = 'rvac0035';2 row(s) affected Rows matched: 3  Changed: 2  Warnings: 0;0.013 sec
+126;10:50:21;update laicon34G.infrastructure_element set location = 'SMA0028' where location = 'sma0028';1 row(s) affected Rows matched: 12  Changed: 1  Warnings: 0;0.021 sec
+127;10:50:21;update laicon34G.infrastructure_element set location = 'VAC0020' where location = 'vAC0020';1 row(s) affected Rows matched: 11  Changed: 1  Warnings: 0;0.023 sec
+128;11:04:43;update laicon34G.reenabled_location set region = null where region = 0;36 row(s) affected Rows matched: 36  Changed: 36  Warnings: 0;0.084 sec
+129;11:04:43;update laicon34G.element_transfer_order set addressee_login = 'juan.gallego' where addressee_login = 'Juan.Gallego';3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0;0.171 sec
+130;11:04:43;update laicon34G.element_transfer_order set order_execution_responsible =  null where order_execution_responsible = 0;5253 row(s) affected Rows matched: 5253  Changed: 5253  Warnings: 0;0.839 sec
+131;11:04:44;update laicon34G.element_transfer_order set authorize_region =  null where authorize_region = 0;6 row(s) affected Rows matched: 6  Changed: 6  Warnings: 0;0.094 sec
+132;11:04:44;update laicon34G.element_transfer_order set creator_login = 'juan.gallego' where creator_login = 'Juan.Gallego';6 row(s) affected Rows matched: 6  Changed: 6  Warnings: 0;0.089 sec
+133;11:04:44;update laicon34G.element_transfer_order set creator_login = 'GJ7169462' where creator_login = 'gj7169462';2 row(s) affected Rows matched: 54  Changed: 2  Warnings: 0;0.122 sec
+134;11:04:44;update laicon34G.element_transfer_order set sender_login = null where sender_login = '2010-10-31 15:25:10';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.345 sec
+135;11:04:45;INSERT INTO `laicon34G`.`users` (`login`, `name`, `email`, `login_mobile`, `authenticate_sap`, `active`, `blocked`, `set_new_password`, `failed_attempts_seq_counter`) VALUES ('ALPOPULAR_WS', 'ALPOPULAR_WS', 'rollout@tigo.com.co', 'ALPOPULAR_WS', 'N', 'Y', 'N', 'Y', '0');1 row(s) affected;0.028 sec
+136;11:04:45;update laicon34G.reenabled_location set deleted_by_user = 'carlos.chilito' where deleted_by_user = 'CARLOS CHILITO';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.0016 sec
+137;11:04:45;update laicon34G.users set login = 'jhoany.rodriguez' where login = 'jhoany.rodriguez ';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.0076 sec
+138;11:04:45;update laicon34G.geographic_location set responsible_user='jhoany.rodriguez' where responsible_user = 'jhoany.rogriguez';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.019 sec
+139;11:04:45;update laicon34G.warehouse_keeper set login =  'david.vanegas' where login = 'david .vanegas';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.016 sec
+140;11:04:45;INSERT INTO `laicon34G`.`region` (`id`, `name`, `commercial`, `responsible_user`) VALUES (9, 'PLATFORM', 'PLATFORM', 'admin');Error Code: 1062. Duplicate entry '9' for key 'PRIMARY';0.00041 sec
+141;11:04:45;update laicon34G.geographic_location set region = 9 where code = 'PLATFORM';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.019 sec
+142;11:04:45;update laicon34G.element_request set truck_type = null where truck_type = 0;4445 row(s) affected Rows matched: 4445  Changed: 4445  Warnings: 0;1.057 sec
+143;11:04:46;update laicon34G.element_request set order_execution_responsible = null where order_execution_responsible = 0;433 row(s) affected Rows matched: 433  Changed: 433  Warnings: 0;0.142 sec
+144;11:04:46;update laicon34G.element_request set direction = 'MSCBOG03_TX' where id = 5585;1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.055 sec
+145;11:04:46;update laicon34G.element_request set direction = 'MSCBOG03_TX' where id = 6008;1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.122 sec
+146;11:04:46;update laicon34G.element set location = 'MSCBOG03_TX' where location = 'MSCBOG03_Tx';6 row(s) affected Rows matched: 1106  Changed: 6  Warnings: 0;3.717 sec
+147;11:04:50;update laicon34G.element set location_asigned = 'VAC0025' where location_asigned  = 'ITALCOL (VAC0025)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;12.954 sec
+148;11:05:03;update laicon34G.element set location_asigned = 'SAT0035' where location_asigned  = 'CINCUENTENARIO (SAT0035)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;2.745 sec
+149;11:05:06;update laicon34G.element set location_asigned = 'MED0031' where location_asigned  = 'Guayabal Fiscalia (MED0031)';5 row(s) affected Rows matched: 5  Changed: 5  Warnings: 0;2.864 sec
+150;11:05:09;update laicon34G.element set location_asigned = 'SUC0027' where location_asigned  = 'Palo Alto (SUC0027)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;2.859 sec
+151;11:05:11;update laicon34G.element set location_asigned = 'TORITUNJA' where location_asigned  = 'Tienda  Tunja (TORITUNJA)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;2.802 sec
+152;11:05:14;update laicon34G.element set location_asigned = 'MED0083' where location_asigned  = 'Aeroparque (MED0083)';2 row(s) affected Rows matched: 2  Changed: 2  Warnings: 0;2.846 sec
+153;11:05:17;update laicon34G.element set location_asigned = 'MED0086' where location_asigned  = 'SURAMERICANA (MED0086)';3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0;2.663 sec
+154;11:05:20;update laicon34G.element set location_asigned = 'MED1018' where location_asigned  = 'GALERIAS DE SAN DIEGO (MED1018)';3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0;2.857 sec
+155;11:05:23;update laicon34G.element set location_asigned = 'CAU0033' where location_asigned  = 'Suárez (CAU0033)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;2.724 sec
+156;11:05:25;update laicon34G.element set location_asigned = 'MED0082' where location_asigned  = 'Micro Noel (MED0082)';3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0;2.851 sec
+157;11:05:28;update laicon34G.element set location_asigned = 'PER0034' where location_asigned  = 'Clinica Comfamiliar (PER0034)';6 row(s) affected Rows matched: 6  Changed: 6  Warnings: 0;2.924 sec
+158;11:05:31;update laicon34G.element set location_asigned = 'MED0285' where location_asigned  = 'ANTILLAS (MED0285)';4 row(s) affected Rows matched: 4  Changed: 4  Warnings: 0;2.679 sec
+159;11:05:34;update laicon34G.element set location_asigned = 'MED1091' where location_asigned  = 'AJISAL (MED1091)';2 row(s) affected Rows matched: 2  Changed: 2  Warnings: 0;2.679 sec
+160;11:05:36;update laicon34G.element set location_asigned = 'MED2041' where location_asigned  = 'SALUDCOOP LA 80 (MED2041)';2 row(s) affected Rows matched: 2  Changed: 2  Warnings: 0;2.828 sec
+161;11:05:39;update laicon34G.element set location_asigned = 'PER0029' where location_asigned  = 'Parque Industrial (PER0029)';2 row(s) affected Rows matched: 2  Changed: 2  Warnings: 0;2.859 sec
+162;11:05:42;update laicon34G.element set location_asigned = 'BOG0911' where location_asigned  = 'Suba Las Mercedes II (BOG0911)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;2.702 sec
+163;11:05:45;update laicon34G.element set location_asigned = 'WAR01CAR' where location_asigned  = 'BODEGA SATELITE CARTAGENA (WAR01CAR)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;2.712 sec
+164;11:05:47;update laicon34G.element set location_asigned = 'COR0061' where location_asigned  = 'Lorica Centro (COR0061)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;2.727 sec
+165;11:05:50;update laicon34G.element set location_asigned = 'MED2023' where location_asigned  = 'Bodega Sabaneta (MED2023)';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;3.106 sec
+166;11:05:53;update laicon34G.internal_location set location='MSCBOG01_DESEMPENO' where location='MSCBOG01_DESEMPE?O';0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0;0.024 sec
+167;11:05:53;update laicon34G.internal_location set location='MSCBOG03_DESEMPENO' where location='MSCBOG03_DESEMPE?O';0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0;0.00024 sec
+168;11:05:53;update laicon34G.element_transfer_order set direction_location='MSCBOG02_TX' where direction_location='MSCBOG02_Tx';1 row(s) affected Rows matched: 58  Changed: 1  Warnings: 0;0.218 sec
+169;11:05:54;update laicon34G.element_transfer_order set direction_location='MSCCAR01_TRAU' where direction_location = 'MSC CAR 01_TRAU';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.110 sec
+170;11:05:54;update laicon34G.element_transfer_order set origin_location='MSCSMA01_TX' where origin_location = 'MSCSMA_TX';1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0;0.056 sec
+171;11:05:54;update laicon34G.element_transfer_order set prepared_state_user='juan.gallego' where prepared_state_user= 'Juan.Gallego';4 row(s) affected Rows matched: 4  Changed: 4  Warnings: 0;0.078 sec
+172;11:05:54;update laicon34G.element_transfer_order set sender_login='juan.gallego' where sender_login= 'Juan.Gallego';4 row(s) affected Rows matched: 4  Changed: 4  Warnings: 0;0.067 sec
+173;11:05:54;update laicon34G.element set location = 'BOG0039' where location = 'Bog0039';22 row(s) affected Rows matched: 201  Changed: 22  Warnings: 0;0.100 sec
+174;11:05:54;update laicon34G.element set location = 'BOG0332' where location = 'Bog0332';24 row(s) affected Rows matched: 167  Changed: 24  Warnings: 0;0.089 sec
+175;11:05:54;update laicon34G.element set location = 'CUN0051' where location = 'cun0051';3 row(s) affected Rows matched: 212  Changed: 3  Warnings: 0;0.100 sec
+176;11:05:54;update laicon34G.element_transfer_order_detail set element_transfer_order = null where element_transfer_order =  0;31 row(s) affected Rows matched: 31  Changed: 31  Warnings: 0;0.456 sec
+177;11:05:55;update laicon34G.inventory_by_models set id_model = null where id_model = 'null';130 row(s) affected Rows matched: 130  Changed: 130  Warnings: 0;0.024 sec
+178;11:05:55;update laicon34G.site set spare_part_maintenance_zone = null where spare_part_maintenance_zone = 0;5 row(s) affected Rows matched: 5  Changed: 5  Warnings: 0;0.032 sec
+179;11:05:55;update laicon34G.desktop_inventory_partial_inventory set partial_download_user = 'EV72287302' where partial_download_user = 'ev72287302';135 row(s) affected Rows matched: 345  Changed: 135  Warnings: 0;0.043 sec
+180;11:05:55;update laicon34G.reenabled_element set internal_location_id = null where internal_location_id = 0;2605 row(s) affected Rows matched: 2605  Changed: 2605  Warnings: 0;0.026 sec
+181;11:05:55;update laicon34G.remote_inventory_inconsistency set ri_location = 'MET0014' where ri_location = 'MET0014 SAN MAR';7 row(s) affected Rows matched: 7  Changed: 7  Warnings: 0;0.094 sec
+182;11:05:55;update laicon34G.remote_inventory_inconsistency set ri_location = 'VIL0004' where ri_location = 'VIL0004 C.VCIO';5 row(s) affected Rows matched: 5  Changed: 5  Warnings: 0;0.00095 sec
+183;11:05:55;update laicon34G.desktop_inventory_element set desktop_inventory_parcial_inventory = null where desktop_inventory_parcial_inventory = 0;2855677 row(s) affected Rows matched: 2855677  Changed: 2855677  Warnings: 0;29.802 sec
+184;11:06:25;INSERT INTO `laicon34G`.`users` (`login`, `name`, `email`, `login_mobile`, `authenticate_sap`, `active`, `blocked`, `set_new_password`, `failed_attempts_seq_counter`) VALUES ('laicon', 'laicon', 'rollout@tigo.com.co', 'laicon', 'N', 'Y', 'N', 'Y', '0');1 row(s) affected;0.015 sec
+185;11:06:25;update laicon34G.quality_inventory_element_result set element = null where element = 0;235 row(s) affected Rows matched: 235  Changed: 235  Warnings: 0;0.057 sec
+186;11:06:25;ALTER TABLE `laicon34G`.`desktop_inventory_element_result` CHANGE COLUMN `element` `element` INT(11);1780422 row(s) affected Records: 1780422  Duplicates: 0  Warnings: 0;30.688 sec
+187;11:06:55;update laicon34G.desktop_inventory_element_result set element = null where element = 0;49513 row(s) affected Rows matched: 49513  Changed: 49513  Warnings: 0;0.457 sec
+188;11:06:56;ALTER TABLE `laicon34G`.`desktop_inventory_element_result`  CHANGE COLUMN `desktop_inventory_element` `desktop_inventory_element` INT(11);1780422 row(s) affected Records: 1780422  Duplicates: 0  Warnings: 0;29.091 sec
+189;11:07:25;update laicon34G.desktop_inventory_element_result set desktop_inventory_element = null where desktop_inventory_element = 0;79800 row(s) affected Rows matched: 79800  Changed: 79800  Warnings: 0;0.750 sec
+190;11:07:26;update laicon34G.desktop_inventory_element_result set location = 'BOG0332' where location = 'Bog0332';17 row(s) affected Rows matched: 380  Changed: 17  Warnings: 0;0.0010 sec
+191;11:07:26;update laicon34G.desktop_inventory_element_result set location = 'BAR0018' where location = 'BAR0018';0 row(s) affected Rows matched: 389  Changed: 0  Warnings: 0;0.00063 sec
+192;11:07:26;update laicon34G.desktop_inventory_element_result set location = 'BOG0039' where location = 'Bog0039';9 row(s) affected Rows matched: 518  Changed: 9  Warnings: 0;0.0010 sec
+193;11:07:26;update laicon34G.desktop_inventory_element_result set location = 'PLATFORM' where location = 'Platform';2 row(s) affected Rows matched: 2556  Changed: 2  Warnings: 0;0.0036 sec
+194;11:07:26;update desktop_inventory_process_result_detail set  desktop_inventory_partial_inventory =  null where  desktop_inventory_partial_inventory = 0;2941726 row(s) affected Rows matched: 2941726  Changed: 2941726  Warnings: 0;35.353 sec
+195;11:08:01;ALTER TABLE `laicon34G`.`desktop_inventory_process_result_detail` CHANGE COLUMN `desktop_inventory_element` `desktop_inventory_element` INT(11);3211779 row(s) affected Records: 3211779  Duplicates: 0  Warnings: 0;24.285 sec
+196;11:08:25;update desktop_inventory_process_result_detail set  desktop_inventory_element =  null where  desktop_inventory_element = 0;80072 row(s) affected Rows matched: 80072  Changed: 80072  Warnings: 0;0.707 sec
+197;11:08:26;ALTER TABLE `laicon34G`.`desktop_inventory_process_result_detail` CHANGE COLUMN `desktop_inventory_element_result` `desktop_inventory_element_result` INT(11);3211779 row(s) affected Records: 3211779  Duplicates: 0  Warnings: 0;24.461 sec
+198;11:08:51;update desktop_inventory_process_result_detail set  desktop_inventory_element_result =  null where  desktop_inventory_element_result = 0;1406413 row(s) affected Rows matched: 1406413  Changed: 1406413  Warnings: 0;17.926 sec
+199;11:09:08;ALTER TABLE `laicon34G`.`desktop_inventory_process_result_new_detail` CHANGE COLUMN `element` `element` INT(11) NULL;49895 row(s) affected Records: 49895  Duplicates: 0  Warnings: 0;0.954 sec
+200;11:09:09;update laicon34G.desktop_inventory_process_result_new_detail set element= null where element = 0;49895 row(s) affected Rows matched: 49895  Changed: 49895  Warnings: 0;0.436 sec
+201;11:09:10;update laicon34G.desktop_inventory_process_result_missing_detail set element_type_asset = null where element_type_asset= 0;115 row(s) affected Rows matched: 115  Changed: 115  Warnings: 0;0.113 sec
+202;11:09:10;ALTER TABLE `laicon34G`.`desktop_inventory_process_result_difference_detail` CHANGE COLUMN `desktop_inventory_element` `desktop_inventory_element` INT(11);171214 row(s) affected Records: 171214  Duplicates: 0  Warnings: 0;2.866 sec
+203;11:09:13;update laicon34G.desktop_inventory_process_result_difference_detail set desktop_inventory_element = null where desktop_inventory_element = 0;140 row(s) affected Rows matched: 140  Changed: 140  Warnings: 0;0.0013 sec
+204;11:09:13;update laicon34G.desktop_inventory_process_result_difference_detail set location = 'BOG0332' where location = 'Bog0332';13 row(s) affected Rows matched: 39  Changed: 13  Warnings: 0;0.00042 sec
+205;11:09:13;update laicon34G.desktop_inventory_process_result_difference_detail set location = 'PLATFORM' where location = 'Platform';1 row(s) affected Rows matched: 1404  Changed: 1  Warnings: 0;0.0020 sec
+206;11:09:13;update laicon34G.desktop_inventory_process_result_difference_detail set location = 'MSCBOG03_DESEMPENO' where location = 'MSCBOG03_DESEMPE?O';133 row(s) affected Rows matched: 133  Changed: 133  Warnings: 0;0.0040 sec
+207;11:09:13;SET SQL_SAFE_UPDATES=1;0 row(s) affected;0.00011 sec
+208;;;;
