@@ -1,45 +1,204 @@
 <AccionesDefinitivas>
 
-  <table></table>
-  <sql></sql>
-  <inconsistencia></inconsistencia>
-  <mensaje></mensaje>
-  <accion></accion>
-  <sql-accion></slq-accion>
-  <ejecutada></ejecutada>
+  <case>
+    <id></id>
+    <table></table>
+    <sql></sql>
+    <inconsistencia></inconsistencia>
+    <mensaje></mensaje>
+    <accion></accion>
+    <sql-accion></slq-accion>
+    <ejecutada></ejecutada>
+  </case>
 
-  <table>invoice</table>
-  <sql>SELECT * FROM laicon20f.invoice where id = 1041;</sql>
-  <inconsistencia>id 1041 no existe en la tabla invoice</inconsistencia>
-  <mensaje>
-    No hay elementos cargados ni tenÃ­an plata. Se eliminan de laicon la factura REPC359550. De la factura 522 se actualizÃ³ el supplier pero no dejo actualizar los elementos que ya estanban boprrado. Adjunto archivo
-  </mensaje>
-  <accion>Actualizar elementos con invoice 1041 a null</accion>
-  <sql-accion>update laicon34G.element set invoice = null where invoice = 1041;</slq-accion>
-  <ejecutada>Y</ejecutada>
+  <case>
+    <id>1</id>
+    <table>invoice</table>
+    <sql>SELECT * FROM laicon20f.invoice where id = 1041;</sql>
+    <inconsistencia>id 1041 no existe en la tabla invoice</inconsistencia>
+    <mensaje>
+      No hay elementos cargados ni tenÃ­an plata. Se eliminan de laicon la factura REPC359550. De la factura 522 se actualizÃ³ el supplier pero no dejo actualizar los elementos que ya estanban boprrado. Adjunto archivo
+    </mensaje>
+    <accion>Actualizar elementos con invoice 1041 a null</accion>
+    <sql-accion>update laicon34G.element set invoice = null where invoice = 1041;</slq-accion>
+    <ejecutada>Y</ejecutada>
+  </case>
 
-  <table>invoice</table>
-  <sql>SELECT * FROM laicon20f.invoice where id = 927;</sql>
-  <inconsistencia>id 927 no existe en la tabla invoice</inconsistencia>
-  <mensaje>no se encuentran registros SOLUCIONADO</mensaje>
-  <accion>ninguna</accion>
-  <sql-accion>ninguna</slq-accion>
-  <ejecutada>N</ejecutada>
+  <case>
+    <id>2</id>
+    <table>invoice</table>
+    <sql>SELECT * FROM laicon20f.invoice where id = 927;</sql>
+    <inconsistencia>id 927 no existe en la tabla invoice</inconsistencia>
+    <mensaje>no se encuentran registros SOLUCIONADO</mensaje>
+    <accion>ninguna</accion>
+    <sql-accion>ninguna</slq-accion>
+    <ejecutada>N</ejecutada>
+  </case>
 
-  <table>geographic_location</table>
-  <sql>select * from laicon20f.geographic_location where code in ('WAR02BG_NAC', 'WAR04BG_NAC');</sql>
-  <inconsistencia>campo con region 0</inconsistencia>
-  <mensaje>
-    Se crea la regional llamada ?Platform?, hay que asiganrle a la geographic location de platform, esta regional.
-    Eliminar de la tabal location 'WAR98BG'. Eliminar de la tabla geographic location las bodegas 'WAR02BG_NAC', 'WAR04BG_NAC'.
-    Actualmente están borradas en la tabla location y no se borraron antes en la de geographic.
-  </mensaje>
-  <accion>eliminar 'WAR98BG' de tabla location y eliminar 'WAR02BG_NAC', 'WAR04BG_NAC' de tabla geographic_location</accion>
-  <sql-accion>
-    delete from laicon34G.location where code = 'WAR98BG';
-    delete from laicon34G.geographic_location where code = 'WAR02BG_NAC';
-    delete from laicon34G.geographic_location where code = 'WAR04BG_NAC';
-  </slq-accion>
-  <ejecutada>N</ejecutada>
+  <case>
+    <id>3</id>
+    <table>geographic_location</table>
+    <sql>select * from laicon20f.geographic_location where code in ('WAR02BG_NAC', 'WAR04BG_NAC');</sql>
+    <inconsistencia>campo con region 0</inconsistencia>
+    <mensaje>
+      Se crea la regional llamada ?Platform?, hay que asiganrle a la geographic location de platform, esta regional.
+      Eliminar de la tabal location 'WAR98BG'. Eliminar de la tabla geographic location las bodegas 'WAR02BG_NAC', 'WAR04BG_NAC'.
+      Actualmente están borradas en la tabla location y no se borraron antes en la de geographic.
+    </mensaje>
+    <accion>eliminar 'WAR98BG' de tabla location y eliminar 'WAR02BG_NAC', 'WAR04BG_NAC' de tabla geographic_location</accion>
+    <sql-accion>
+      delete from laicon34G.location where code = 'WAR98BG';
+      delete from laicon34G.geographic_location where code = 'WAR02BG_NAC';
+      delete from laicon34G.geographic_location where code = 'WAR04BG_NAC';
+    </slq-accion>
+    <ejecutada>N</ejecutada>
+  </case>
+
+  <case>
+    <id>4</id>
+    <table>operation_document</table>
+    <sql>
+      select * from laicon34G.operation_document where id = 108;
+      select * from air_waybill where id = 1242;
+    </sql>
+    <inconsistencia>id 1242 no existe en tabla air_waybill</inconsistencia>
+    <mensaje>
+      Asociarle el awb: FRA188047.
+    </mensaje>
+    <accion>
+      Asociar id de de la tabla air_waybill con number = FRA188047 a el campo air_waybill de la tabla operation_document con id = 108
+    </accion>
+    <sql-accion>
+      select id from air_waybill where number = 'FRA188047';
+      update laicon34G.operation_document set air_waybill = 1278 where id = 108;
+    </slq-accion>
+    <ejecutada>Y</ejecutada>
+  </case>
+
+  <case>
+    <id>5</id>
+    <table>mic_batch_responsible</table>
+    <sql>
+      select * from laicon20f.mic_batch_responsible where login in ('JC16076088','JV1012329034','LS53105920','julian.castrillon') and mic_batch in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
+      select * from laicon20f.mic_batch where id in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
+    </sql>
+    <inconsistencia>
+      id (6600,6740,6747,6762,6767,6768,6784,6756,6758) no existen en la tabla mic_batch necesarios para registros en la tabla mic_batch_responsible
+    </inconsistencia>
+    <mensaje>
+      Eliminar estos batch, no tienen ningún millicom code asociado
+    </mensaje>
+    <accion>
+      eliminar registros que no tienen un mic_batch inexistente
+    </accion>
+    <sql-accion>
+      delete from laicon20f.mic_batch_responsible where login in ('JC16076088','JV1012329034','LS53105920','julian.castrillon') and mic_batch in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
+    </slq-accion>
+    <ejecutada>Y</ejecutada>
+  </case>
+
+  <case>
+    <id>6</id>
+    <table>internal_location</table>
+    <sql>
+      select * from internal_location where id in (2495,2496);
+      select * from location where code like 'BARTRAU01';
+    </sql>
+    <inconsistencia>
+      id en location no existe
+    </inconsistencia>
+    <mensaje>
+      Cuál es la location de las internal_location con tigo_code BARTRAU01-2 y BARTRAU01-3,
+      con id 2495 y 2496 respectivamente, actualmente tienen una Location q no existe.
+      Eliminadas estas internal location
+    </mensaje>
+    <accion>
+      ninguna, ya se encuentran eliminadas
+    </accion>
+    <sql-accion>ninguna</slq-accion>
+    <ejecutada>N</ejecutada>
+  </case>
+
+  <case>
+    <id>7</id>
+    <table>location</table>
+    <sql>
+      select * from infrastructure_element where id in (10015335,10015334);
+      select * from location where code = 'MWNOR50';
+    </sql>
+    <inconsistencia>
+      location con code = 'MWNOR50' inexistente necesaria para infrastructure_element con id in (10015335,10015334)
+    </inconsistencia>
+    <mensaje>
+      Pdte saber quien eliminó esta ubicación
+    </mensaje>
+    <accion>ninguna</accion>
+    <sql-accion>ninguna</slq-accion>
+    <ejecutada>PENDIENTE</ejecutada>
+  </case>
+
+  <case>
+    <id>8</id>
+    <table>invoice_detail</table>
+    <sql>select element_model from invoice_detail where id in (54,2587,4113);
+    </sql>
+    <inconsistencia>
+      element_model inexistente en la tabla invoice_detal para los id in (54,  2587,
+    </inconsistencia>
+    <mensaje>
+      Los modelos de latabla invoice_detail cuyo ids son 54,2587,4113 no existen, favor indicar cuales serían los reales. Eliminar el detalle de esta factura.
+    </mensaje>
+    <accion> elimir de la tabla invoice_detail</accion>
+    <sql-accion>delete from invoice_detail where id in (54, 2587, 4113);</slq-accion>
+    <ejecutada>Y</ejecutada>
+  </case>
+
+  <case>
+    <id>9</id>
+    <table>model_x_type_asset</table>
+    <sql>
+      select * from model_x_type_asset where element_model = 'CARD_ADLI_COMPACTPCICARD';
+      select * from element_type_asset where id = 145;
+    </sql>
+    <inconsistencia>
+      *id = 145 de element_type_asset no existe
+    </inconsistencia>
+    <mensaje>
+      Modelo esta borrado, asignarle por debajo el asset type: Card
+    </mensaje>
+    <accion>
+      actualizar campo  element_type_asset a 228 del registro donde element_model ='CARD_ADLI_COMPACTPCICARD' de la tabla  model_x_type_asset
+    </accion>
+    <sql-accion>update model_x_type_asset set element_type_asset = 228 where element_model = 'CARD_ADLI_COMPACTPCICARD';</slq-accion>
+    <ejecutada>Y</ejecutada>
+  </case>
+
+  <case>
+    <id>10</id>
+    <table>invoice_template_detail</table>
+    <sql>
+      select element_model from invoice_template_detail where id = 128;
+      select * from element_model where id = 1001399;
+    </sql>
+    <inconsistencia>
+      element_model con id = 1001399 no existe y invoice_template_detail donde id = 128 hace referencia a este.
+    </inconsistencia>
+    <mensaje>Eliminar este template</mensaje>
+    <accion>eliminat invoice_template_detail donde id = 128</accion>
+    <sql-accion>delete from invoice_template_detail where id = 128;</slq-accion>
+    <ejecutada>Y</ejecutada>
+  </case>
+
+  <case>
+    <id></id>
+    <table></table>
+    <sql></sql>
+    <inconsistencia></inconsistencia>
+    <mensaje></mensaje>
+    <accion></accion>
+    <sql-accion></slq-accion>
+    <ejecutada></ejecutada>
+  </case>
+
 
 </AccionesDefinitivas>

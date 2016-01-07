@@ -1,14 +1,15 @@
 /*01-07-2015*/
 
 /*No existe en la tabla users*/
-select * from  laicon20f.users where login='jhoany.rogriguez';
-  select responsible_user from geographic_location where code='WAR04BUC';
-  -- cambiar en la tabla users el loging por 'jhoany.rogriguez' ya q en esta esta 'jhoany.rogriguez '
+--select * from  laicon20f.users where login='jhoany.rogriguez';
+  --select responsible_user from geographic_location where code='WAR04BUC';
+  -- cambiar en la tabla users el loging por 'jhoany.rogriguez' ya q en esta esta 'jhoany.rogriguez ' 
+  --solucionado desde PreMigracionParaMYSQL.sql
 
-SELECT * FROM laicon20f.warehouse_keeper where id = '98670475';
-  select * from users where login =  'david .vanegas';
+--SELECT * FROM laicon20f.warehouse_keeper where id = '98670475';
+  --select * from users where login =  'david.vanegas';
 -- cambiar en la tabla warehouse_keeper el loging por 'david.vanegas' ya q en esta esta 'david .vanegas'
-
+  --solucionado desde PreMigracionParaMYSQL.sql
 
 /*No existe en la tabala supplier*/
 --SELECT * FROM laicon20f.invoice where id = 927;
@@ -24,16 +25,19 @@ SELECT * FROM laicon20f.warehouse_keeper where id = '98670475';
 /*campo region con valores -1 y 0*/
 --select * from laicon20f.geographic_location where code in ('PLATFORM','WAR98BG','WAR02BG_NAC', --'WAR04BG_NAC');
 -- se escala a los funcionales para solicion
+-- AccionesDefinitivas.xml
 
 /*id air_waybill no existe 1242*/
-select * from laicon20f.operation_document where id = 108;
-  select * from air_waybill where id = 1242;
+--select * from laicon20f.operation_document where id = 108;
+  --select * from air_waybill where id = 1242;
   -- se escala a los funcionales para solicion
+  -- AccionesDefinitivas.xml
 
 /*id mic_batch no existen*/
-select * from laicon20f.mic_batch_responsible where login in ('JC16076088','JV1012329034','LS53105920','julian.castrillon') and mic_batch in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
-  select * from laicon20f.mic_batch where id in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
--- se escala a los funcionales para solicion
+--select * from laicon20f.mic_batch_responsible where login in ('JC16076088','JV1012329034','LS53105920','julian.castrillon') and mic_batch in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
+  --select * from laicon20f.mic_batch where id in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
+  -- se escala a los funcionales para solicion
+  -- AccionesDefinitivas.xml
 
 /*No existe en la tabla users */
 select code,assigned_by_user from mic_code where assigned_by_user = 'ALPOPULAR_WS';
@@ -42,9 +46,9 @@ select code,assigned_by_user from mic_code where assigned_by_user = 'ALPOPULAR_W
 
 
 /*id en location no existe*/
-select * from internal_location where id in (2495,2496);
-  select * from location where code = 'BARTRAU01';
--- se escala a los funcionales para solicion
+--select * from internal_location where id in (2495,2496);
+  --select * from location where code = 'BARTRAU01';
+-- s	e escala a los funcionales para solicion
 
 /*No existen el code en la tabla location
 'BAR0XXX'
@@ -98,9 +102,10 @@ select * from location where code in (select distinct laicon_location_code from 
 -- se escala a los funcionales para solicion
 
 /*No existen el code en la tabla location  'MWNOR50' */
-select * from infrastructure_element where id in (10015335,10015334);
-  select * from location where code = 'MWNOR50';
+--select * from infrastructure_element where id in (10015335,10015334);
+  --select * from location where code = 'MWNOR50';
 -- se escala a los funcionales para solicion
+-- AccionesDefinitivas.xml
 
 /*login en la tabla users no existe 'ALPOPULAR_WS'*/
 select count(*) from element_transfer_order where addressee_login = 'ALPOPULAR_WS';
@@ -134,26 +139,26 @@ select * from element_model where id in (select distinct plu from model_value_ch
 '1000684'
 '1001399'
 */
-select element_model from invoice_detail where id in (54,
-2587,
-4113);
-
-select * from element_model where id in (select element_model from invoice_detail where id in (54,
-2587,
-4113));
+--select element_model from invoice_detail where id in (54,
+--2587,
+--4113);
+--select * from element_model where id in (select element_model from invoice_detail where id in (54,
+--2587,
+--4113));
 -- se escala a los funcionales para solicion
-
+-- AccionesDefinitivas.xml
 
 /*element_model en la tabla element_model no existen 1001399*/
-select element_model from invoice_template_detail where id = 128;
-  select * from element_model where id = 1001399;
--- se escala a los funcionales para solicion
+--select element_model from invoice_template_detail where id = 128;
+  --select * from element_model where id = 1001399;
+  -- se escala a los funcionales para solicion
+  -- AccionesDefinitivas.xml
 
 /*id de element_type_asset no existe 145*/
-select * from model_x_type_asset where element_model = 'CARD_ADLI_COMPACTPCICARD';
-  select * from element_type_asset where id =  145;
+--select * from model_x_type_asset where element_model = 'CARD_ADLI_COMPACTPCICARD';
+  --select * from element_type_asset where id =  145;
   -- se escala a los funcionales para solicion
-
+  -- AccionesDefinitivas.xml
 
 /*02-07-2015*/
 
