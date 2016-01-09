@@ -877,7 +877,7 @@ CREATE TABLE elem_movement_order_comment (
   order_id number(11,0),
   user_login varchar2(50),
   comment_date date,
-  comment_time date,
+  comment_time TIMESTAMP,
   text clob,
   PRIMARY KEY (id)
 ) /*ENGINE=MyISAM AUTO_INCREMENT=91076 DEFAULT CHARSET=latin1*/;
@@ -1187,7 +1187,7 @@ CREATE TABLE elem_transfer_order_comment (
   element_transfer_order number(11,0),
   user_login varchar2(50),
   comment_date date,
-  comment_time date,
+  comment_time TIMESTAMP,
   text clob,
   PRIMARY KEY (id)
 ) /*ENGINE=MyISAM AUTO_INCREMENT=102062 DEFAULT CHARSET=latin1*/;
@@ -1709,7 +1709,7 @@ CREATE TABLE infrastructure_element_his (
   id number(11,0) NOT NULL /*AUTO_INCREMENT*/,
   infrastructure_element number(11,0),
   history_date date,
-  history_time date,
+  history_time TIMESTAMP,
   action varchar2(50),
   user_login varchar2(50),
   detailed_type varchar2(50),
@@ -2206,7 +2206,7 @@ CREATE TABLE movement_quota (
 CREATE TABLE movement_report (
   id number(11,0) NOT NULL /*AUTO_INCREMENT*/,
   report_date date,
-  report_time date,
+  report_time TIMESTAMP,
   PRIMARY KEY (id)
 ) /*ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=latin1*/;
 
@@ -2316,7 +2316,7 @@ CREATE TABLE operation_document_comment (
   operation_document number(11,0),
   user_login varchar2(50),
   comment_date date,
-  comment_time date,
+  comment_time TIMESTAMP,
   text varchar2(255),
   PRIMARY KEY (id)
 ) /*ENGINE=MyISAM AUTO_INCREMENT=180 DEFAULT CHARSET=latin1*/;
