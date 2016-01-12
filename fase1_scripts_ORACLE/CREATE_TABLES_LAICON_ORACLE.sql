@@ -271,6 +271,7 @@ CREATE TABLE dktp_invtory_admin_warehouse (
   last_update_date TIMESTAMP,
   comments varchar2(500),
   enabled varchar2(1) DEFAULT 'Y',
+  inventory_nfa varchar(1) DEFAULT 'Y',
   PRIMARY KEY (id)
 ) /*ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=latin1*/;
 
@@ -595,6 +596,7 @@ CREATE TABLE element (
   contract varchar2(50),
   location varchar2(50),
   serial varchar2(100),
+  original_serial varchar2(100),
   purchase_price number(15,3),
   warranty_duration number(11,0),
   creation_date TIMESTAMP,
@@ -656,6 +658,7 @@ CREATE TABLE element (
   services_cop number(15,3),
   services_usd number(15,3),
   project varchar2(255),
+  date_discharged TIMESTAMP,
   PRIMARY KEY (id)
 /*  KEY element_deleted_idx (deleted),*/
 /*  KEY element_containing_element_idx (containing_element),*/
@@ -3233,4 +3236,4 @@ CREATE TABLE user_password_history(
     password varchar(255),
     register_date timestamp,
     PRIMARY KEY (ID)
-)
+);

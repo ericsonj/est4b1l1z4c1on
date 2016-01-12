@@ -23,7 +23,7 @@
   -- AccionesDefinitivas.xml
 
 /*campo region con valores -1 y 0*/
---select * from laicon20f.geographic_location where code in ('PLATFORM','WAR98BG','WAR02BG_NAC', --'WAR04BG_NAC');
+--select * from laicon20f.geographic_location where code in ('PLATFORM','WAR98BG','WAR02BG_NAC', 'WAR04BG_NAC');
 -- se escala a los funcionales para solicion
 -- AccionesDefinitivas.xml
 
@@ -44,6 +44,10 @@ select code,assigned_by_user from mic_code where assigned_by_user = 'ALPOPULAR_W
   select * from users where login = 'ALPOPULAR_WS';
 -- se debe crear el usuario
 
+/*Se eliminaron anteriomente estas geographic_location que son necesarias para nationalization_place*/
+select * from nationalization_place;
+select * from geographic_location where code in ('WAR02BG_NAC', 
+'WAR04BG_NAC');
 
 /*id en location no existe*/
 --select * from internal_location where id in (2495,2496);

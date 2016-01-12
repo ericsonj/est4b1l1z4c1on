@@ -50,6 +50,8 @@
       delete from laicon34G.location where code = 'WAR98BG';
       delete from laicon34G.geographic_location where code = 'WAR02BG_NAC';
       delete from laicon34G.geographic_location where code = 'WAR04BG_NAC';
+      delete from location where code = 'WAR04BG_NAC';
+      delete from location where code = 'WAR02BG_NAC';		
     </slq-accion>
     <ejecutada>N</ejecutada>
   </case>
@@ -92,7 +94,21 @@
       eliminar registros que no tienen un mic_batch inexistente
     </accion>
     <sql-accion>
-      delete from laicon20f.mic_batch_responsible where login in ('JC16076088','JV1012329034','LS53105920','julian.castrillon') and mic_batch in (6600,6740,6747,6762,6767,6768,6784,6756,6758);
+      delete from mic_batch_responsible where login = 'JC16076088' and mic_batch = 6600 ;
+      delete from mic_batch_responsible where login = 'JV1012329034' and mic_batch = 6600 ;
+      delete from mic_batch_responsible where login = 'LS53105920' and mic_batch = 6600 ;
+      delete from mic_batch_responsible where login = 'JC16076088' and mic_batch = 6740 ;
+      delete from mic_batch_responsible where login = 'JV1012329034' and mic_batch = 6740 ;
+      delete from mic_batch_responsible where login = 'LS53105920' and mic_batch = 6740 ;
+      delete from mic_batch_responsible where login = 'JC16076088' and mic_batch = 6747 ;
+      delete from mic_batch_responsible where login = 'julian.castrillon' and mic_batch = 6756 ;
+      delete from mic_batch_responsible where login = 'julian.castrillon' and mic_batch = 6758 ;
+      delete from mic_batch_responsible where login = 'JC16076088' and mic_batch = 6762 ;
+      delete from mic_batch_responsible where login = 'JC16076088' and mic_batch = 6767 ;
+      delete from mic_batch_responsible where login = 'LS53105920' and mic_batch = 6767 ;
+      delete from mic_batch_responsible where login = 'JC16076088' and mic_batch = 6768 ;
+      delete from mic_batch_responsible where login = 'JC16076088' and mic_batch = 6784 ;
+      delete from mic_batch_responsible where login = 'LS53105920' and mic_batch = 6784 ;
     </slq-accion>
     <ejecutada>Y</ejecutada>
   </case>

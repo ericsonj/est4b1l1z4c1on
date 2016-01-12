@@ -1,0 +1,3 @@
+bug: tabla functional_unit_x_invoice hace referencia a el id de functional_unit_description pero esta tabla esta vacia.
+  select * from functional_unit_x_invoice;
+  select * from functional_unit_description;
