@@ -259,5 +259,13 @@ update laicon20f.desktop_inventory_process_result_difference_detail set location
 update laicon20f.desktop_inventory_process_result_difference_detail set location = 'MSCBOG03_DESEMPENO' where location = 'MSCBOG03_DESEMPE?O';
 
 /*por hacer*/
+update desktop_inventory set login = 'WT80126241' where login = 'wt80126241'; 
+update desktop_inventory set login = 'WM1037622561' where login = 'wM1037622561'; 
+update desktop_inventory set login = 'KG55313440' where login = 'kg55313440'; 
+update desktop_inventory set login = 'JM1031122956' where login = 'jm1031122956'; 
+update desktop_inventory set login = 'javier.espinosa' where login = 'Javier.Espinosa'; 
+update desktop_inventory set login = 'FR1143425033' where login = 'fr1143425033'; 
+update desktop_inventory set login = 'DC1037610423' where login = 'Dc1037610423'; 
+update desktop_inventory set login = 'AK71738921' where login = 'ak71738921';
 
 SET SQL_SAFE_UPDATES=1;

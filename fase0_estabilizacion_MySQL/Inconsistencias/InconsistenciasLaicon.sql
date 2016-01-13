@@ -49,6 +49,20 @@ select * from nationalization_place;
 select * from geographic_location where code in ('WAR02BG_NAC', 
 'WAR04BG_NAC');
 
+/*location con code = 'RBOG1453_CUS' no existe necesario para registro en tabla Sislog_PedidoSalida con id 19065*/
+select * from Sislog_PedidoSalida where id = 19065 ;
+select * from location where code = 'RBOG1453_CUS';
+/*accion*/
+update Sislog_PedidoSalida set CodigoDestinatario = 'RBOG1453_CUSTOMER' where CodigoDestinatario = 'RBOG1453_CUS';
+
+/*No se encuebtra la location con codigo 'MSCCAR01_TRAU' necesaria para element_transfer_order con id = 17552*/
+select * from element_transfer_order where id = 17552;
+select * from location where code = 'MSCCAR01_TRAU';
+
+/*Campo UsuarioCreacion null en los registros con id 1691, 1692, 1693, 1694 de la tabla Sislog_PedidoEntrada*/
+Select * from Sislog_PedidoEntrada where id in (1691, 1692, 1693, 1694);
+Select * from Sislog_PedidoEntrada where UsuarioCreacion = 'null';
+
 /*id en location no existe*/
 --select * from internal_location where id in (2495,2496);
   --select * from location where code = 'BARTRAU01';
@@ -117,26 +131,48 @@ select count(*) from element_transfer_order where addressee_login = 'ALPOPULAR_W
 -- se debe crear el usuario
 
 /*plu en la tabla element_model no existen
-'1000061'
-'1007850'
-'1007913'
-'1008013'
-'1008014'
-'5000022'
+1000061,
+1007850,
+1007913,
+1008013,
+1008014,
+5000022,
+80009703,
+1009678,
+1009679,
+1009680,
+1009681,
+1009948,
+1009949,
 */
 select distinct plu from model_value_change where id in (10,
 221,
 300,
 509,
 515,
-1788);
+1788,
+8368,
+8419,
+8420,
+8421,
+8422,
+8920,
+8921);
 select * from element_model where id in (select distinct plu from model_value_change where id in (10,
 221,
 300,
 509,
 515,
-1788));
+1788,
+8368,
+8419,
+8420,
+8421,
+8422,
+8920,
+8921));
 -- a la espera de la respuesta de jorge garcia
+
 
 /*element_model en la tabla element_model no existen
 'KITMW_NEC_SDH113000S'
