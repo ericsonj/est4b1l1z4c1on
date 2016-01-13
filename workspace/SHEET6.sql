@@ -15,3 +15,26 @@ select * from Sislog_PedidoSalida where id = 19065 ;
 select * from location where code like '%RBOG1453_CUS%';
 
 update Sislog_PedidoSalida set CodigoDestinatario = 'RBOG1453_CUSTOMER' where CodigoDestinatario = 'RBOG1453_CUS';
+
+select * from element_transfer_order where id = 17552;
+select * from location where code = 'MSCCAR01_TRAU';
+
+Select * from Sislog_PedidoEntrada where id in (1691, 1692, 1693, 1694);
+Select * from Sislog_PedidoEntrada where UsuarioCreacion = 'null';
+update Sislog_PedidoEntrada set UsuarioCreacion = 'rollout' where UsuarioCreacion = 'null';
+
+select distinct plu from model_value_change where id in (10,
+221,
+300,
+509,
+515,
+1788,
+8368,
+8419,
+8420,
+8421,
+8422,
+8920,
+8921);
+
+
