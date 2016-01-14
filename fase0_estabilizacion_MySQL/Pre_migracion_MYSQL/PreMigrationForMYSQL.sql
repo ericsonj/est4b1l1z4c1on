@@ -268,4 +268,9 @@ update desktop_inventory set login = 'FR1143425033' where login = 'fr1143425033'
 update desktop_inventory set login = 'DC1037610423' where login = 'Dc1037610423'; 
 update desktop_inventory set login = 'AK71738921' where login = 'ak71738921';
 
+UPDATE inventory_elements SET user_create = 'DF72272569' where user_create = 'DF72272569 ';
+update element_request set direction = 'RBOG1453_CUSTOMER' where direction = 'RBOG1453_CUS';
+update element set location = 'RBOG1453_CUSTOMER' where location = 'RBOG1453_CUS';
+update element set location_asigned =  'VAC0043' where location_asigned = 'KM18 (VAC0043)';
+
 SET SQL_SAFE_UPDATES=1;

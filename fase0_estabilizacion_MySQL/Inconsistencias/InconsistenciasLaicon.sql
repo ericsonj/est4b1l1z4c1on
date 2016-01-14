@@ -203,25 +203,55 @@ select * from element_model where id in (select distinct plu from model_value_ch
 /*02-07-2015*/
 
 /*No esiste en la tabla warehouse necesarios para 258 registros de la tabla inventory_elements*/
-select * from warehouse where code in ('VIL0004',
-'BOG0124',
-'BUC0001',
-'CAR0011',
+select * from inventory_elements where id in (20,
+21,
+22,
+242,
+260,
+262,
+263,
+264,
+265,
+288,
+373,
+439,
+440,
+701,
+1636,
+1732,
+1911,
+1917,
+1918,
+2735,
+2821,
+2822,
+5403,
+5696,
+5697,
+6211,
+7324,
+7325) order by  warehouse desc;
+select * from warehouse where code in ('WAR15BGEXT',
+'VIL0004',
+'VAL0098',
 'VAC0032',
-'BOG0005',
-'MSCBAQ01_CORE',
-'BOG0003',
-'IBA0017',
-'MSCCAL01_TX',
 'MWCOS04',
+'MSCCAL01_TX',
+'MSCBAQ01_VAS',
+'MSCBAQ01_COR',
+'IBA0017',
+'CAR0011',
+'BUC0001',
+'BOG0605',
 'BOG0352',
 'BOG0147',
-'MSCBAQ01_VAS',
-'VAL0098',
-'BOG0605',
+'BOG0124',
+'BOG0005',
+'BOG0003',
 'BAR0430',
-'WAR15BGEXT'
+'ANT0058'
 );
+
 
 /*valor del campo spare_part_warehouse en 0 no existe en la tabla spare_part_warehouse y no se permite valor null*/
 select * from spare_part_maintenance_zone where id = 53;
@@ -272,7 +302,7 @@ select * from warehouse where code in ('WAR13BGEXT',
 'WAR26BGEXT');
 
 /*No se encuentran los code en la tabla location necesarios para la tabla element*/
-select * from location where code in ('COR0032','VAC0128(P)','VAC0131 (P)','WAR08BG');
+select * from location where code in ('COR0032','VAC0128(P)','VAC0131 (P)','WAR08BG', 'ANT0113');
 
 /*No existe id en la tabla air_waybill'242'
 '590','1173','1194','1212','1242'
@@ -280,13 +310,13 @@ select * from location where code in ('COR0032','VAC0128(P)','VAC0131 (P)','WAR0
 ,'1230','1231','1232','1233','1234','1245','1258'
 ,'1259','1265','1264','1269','1270','1271','1273'
 necesarios para 1223 registros en ela tabla element*/
-select * from air_waybill where id in('590','1173','1194','1212','1242'
+select * from air_waybill where id in('242','590','1173','1194','1212','1242'
 ,'1219','1225','1226','1224','1227','1228','1229'
 ,'1230','1231','1232','1233','1234','1245','1258'
 ,'1259','1265','1264','1269','1270','1271','1273');
 
 
-/*no existe Id en la tabla element_model se adjunta excel*/
+/*no existe Id en la tabla element_model se adjunta excel becesario para 11584 elemento de la tabala element*/
 select * from element_model where id in ('F_SIEM_F:ACOMV',
 'F_SIEM_F:RXCUV5',
 'EMI-P_SIEM_EMI-P:SHEV2',
@@ -414,7 +444,34 @@ select * from element_model where id in ('F_SIEM_F:ACOMV',
 'C04NP_ADLI_COMPACTPCI',
 'POWSP_ADLI_DMP200A1',
 'R_NEC_RACKDMR500',
-'10BATT_COSL_BATERIACOSLIGHT6-GFM-10012V100AH02011');
+'10BATT_COSL_BATERIACOSLIGHT6-GFM-10012V100AH02011',
+'B3G_HUAW_16MO_NO_BINDING_21_0CM£9_7CM',
+'UNID_VPC_10_AWG_¼',
+'10002296',
+'10002639',
+'10003713',
+'10005034',
+'10005876',
+'10006755',
+'10006758',
+'10006774',
+'10006778',
+'10006784',
+'10006790',
+'10023880',
+'10023882',
+'10023883',
+'10026239',
+'10026241',
+'10026243',
+'10026245',
+'10026248',
+'10026250',
+'10027713',
+'10027778',
+'10027779',
+'10027792',
+'10027806');
 
 /*no existe id en la tabla element_type_asset 145*/
 select element_type_asset from element where id in (280667

@@ -432,7 +432,7 @@ update laicon20f.element set internal_location_id = 1 where internal_location_id
 select * from location where code in ('WAR08BG',
 'VAC0128(P)',
 'COR0032',
-'VAC0131 (P)');
+'VAC0131 (P)', 'ANT0113');
 --ACCION
 update laicon20f.element set location = 'BOG0039' where location = 'Bog0039';
 update laicon20f.element set location = 'BOG0332' where location = 'Bog0332';
@@ -441,7 +441,7 @@ update laicon20f.element set location = 'VAC0128' where location = 'VAC0128(P)';
 update laicon20f.element set location = 'VAC0131' where location = 'VAC0131 (P)';
 update laicon20f.element set location = 'COR0031' where location = 'COR0032';
 update laicon20f.element set location = 'WAR08BGEXT' where location = 'WAR08BG';
-
+update element set location = 'ANT0112' where location = 'ANT0113';
 
 /*no existe id en la tabala invoice necesario para element*/
 select * from invoice where id in (898);
@@ -516,12 +516,12 @@ select * from spare_part_maintenance_zone where id = 53;
 update laicon20f.spare_part_maintenance_zone set spare_part_warehouse = 25 where id = 53;
 
 
-/*No esiset el login en la tabla users necesario para 48 registros de la tabla element_request*/
+/*No existe el login en la tabla users necesario para 48 registros de la tabla element_request*/
 select * from users where login like 'jose.diaz';
 --ACCION
 update laicon20f.element_request set login = 'rollout' where login = 'jose.diaz';
 
-/*valor del campo code no esiste en la tabla location necesario para 3 registros de la tabla element_request*/
+/*valor del campo code no existe en la tabla location necesario para 3 registros de la tabla element_request*/
 select * from location where code like 'WAR01BAREXT';
 --ACCION
 update laicon20f.element_request set location = 'WAR01BAR' where location = 'WAR01BAREXT';
