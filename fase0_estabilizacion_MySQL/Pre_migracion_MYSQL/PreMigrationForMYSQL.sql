@@ -273,4 +273,9 @@ update element_request set direction = 'RBOG1453_CUSTOMER' where direction = 'RB
 update element set location = 'RBOG1453_CUSTOMER' where location = 'RBOG1453_CUS';
 update element set location_asigned =  'VAC0043' where location_asigned = 'KM18 (VAC0043)';
 
+update desktop_inventory_partial_inventory set partial_download_user = 'RM1140828950' where partial_download_user = 'rm1140828950';
+update desktop_inventory_partial_inventory set partial_download_user = 'JM1031122956' where partial_download_user = 'jm1031122956';
+
+update element_transfer_order set direction_location = 'MSCCAR01_TRA' where direction_location = 'MSCCAR01_TRAU';
+
 SET SQL_SAFE_UPDATES=1;

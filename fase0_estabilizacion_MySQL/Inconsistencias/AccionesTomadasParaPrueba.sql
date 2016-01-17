@@ -384,9 +384,15 @@ update laicon20f.element set awb = 1 where awb = 1271;
 update laicon20f.element set awb = 1 where awb = 1273;
 
 /*no existe id en la tabla internal_location importante para 1018 registros de la tabla element*/
-select * from internal_location where id in (2761,
+select * from internal_location where id in (2228,
+2205,
+2761,
 263,
 264,
+221,
+270,
+266,
+2207,
 312,
 317,
 2150,
@@ -406,27 +412,34 @@ select * from internal_location where id in (2761,
 3848,
 2061);
 --ACCION
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 2761;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 263;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 264;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 312;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 317;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 2150;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 301;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 326;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 331;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 333;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 311;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 335;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 337;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 2153;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 3603;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 2154;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 1900;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 223;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 5093;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 3848;
-update laicon20f.element set internal_location_id = 1 where internal_location_id = 2061;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2228;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2205;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2761;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 263;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 264;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 221;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 270;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 266;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2207;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 312;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 317;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2150;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 301;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 326;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 331;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 333;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 311;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 335;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 337;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2153;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 3603;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2154;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 1900;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 223;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 5093;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 3848;
+UPDATE element SET internal_location_id  = 1 where internal_location_id = 2061;
+
 
 /*No existe en code en la tabal location necesario para la tabla element*/
 select * from location where code in ('WAR08BG',
@@ -592,9 +605,20 @@ update laicon20f.functional_unit set warehouse_code = 'WAR03BG' where warehouse_
 
 /*No existe id en la tabla desktop_inventory necesarios para 63 registros en la tabla desktop_inventory_partial_inventory*/
 select * from desktop_inventory where id in (11340,
-11341,11342,11344,11345,
-11346,11348,11349,11351,
-11372,11376,21506,21578);
+11341,
+11342,
+11344,
+11345,
+11346,
+11348,
+11349,
+11351,
+11372,
+11376,
+21506,
+21578,
+28278,
+28279);
 --ACCION
 update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 11300 where desktop_inventory = 11340;
 update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 11300 where desktop_inventory = 11341;
@@ -609,30 +633,46 @@ update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 113
 update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 11300 where desktop_inventory = 11376;
 update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 11300 where desktop_inventory = 21506;
 update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 11300 where desktop_inventory = 21578;
+update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 11300 where desktop_inventory = 28278;
+update laicon20f.desktop_inventory_partial_inventory set desktop_inventory = 11300 where desktop_inventory = 28279;
 
 /*No existe id en tabla internal_location necesaria para 20 registros de la tabla desktop_inventory_partial_inventory*/
-select * from internal_location where id in ('3825',
-'3848','2061','5490','3823','222','223',
-'2380','3812','3603','7552');
+select * from internal_location where id in (222,
+223,
+2061,
+2205,
+2207,
+2228,
+2380,
+3603,
+3812,
+3823,
+3825,
+3848,
+5490,
+7552);
+
 select * from internal_location where id in (select internal_location from desktop_inventory_partial_inventory where id in (215,
 367,412,415,424,586,587,687,689,693,1932,1933,2417,
 2418,2419,2461,2462,2463,2465,2468));
 --ACCION
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3825;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3848;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 2061;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 5490;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3823;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 222;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 223;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 2380;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3812;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3603;
-update laicon20f.desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 7552;
-
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 222;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 223;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 2061;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 2205;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 2207;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 2228;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 2380;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3603;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3812;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3823;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3825;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 3848;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 5490;
+update desktop_inventory_partial_inventory set internal_location = 1 where internal_location = 7552;
 
 /*No existe id en tabla internal_location 2761, 3848*/
-select * from internal_location where id in (2761,3848);
+select * from internal_location where id in (2761,3848,2205,2228,2207);
 select distinct internal_location_id from quality_inventory_element where id in (6370,
 6400,6404,6405,31119,31118,31117,31098,33145,33146,33147,
 33148,33149,33150,33151,33152,33153,33154,33155,33156,33157,

@@ -316,7 +316,7 @@ select * from air_waybill where id in('242','590','1173','1194','1212','1242'
 ,'1259','1265','1264','1269','1270','1271','1273');
 
 
-/*no existe Id en la tabla element_model se adjunta excel becesario para 11584 elemento de la tabala element*/
+/*no existe Id en la tabla element_model se adjunta excel necesario para 11584 elemento de la tabala element*/
 select * from element_model where id in ('F_SIEM_F:ACOMV',
 'F_SIEM_F:RXCUV5',
 'EMI-P_SIEM_EMI-P:SHEV2',
@@ -845,9 +845,15 @@ INSERT INTO internal_location VALUES(3684, 'TRAU 00', 'TRAU 00 - CERRO CIRUMA - 
 
 
 /*no existe id en la tabla internal_location importante para 1018 registros de la tabla element*/
-select * from internal_location where id in (2761,
+select * from internal_location where id in (2228,
+2205,
+2761,
 263,
 264,
+221,
+270,
+266,
+2207,
 312,
 317,
 2150,
@@ -1026,15 +1032,37 @@ select * from geographic_location where code in (select geographic_location from
 
 /*No existe id en la tabla desktop_inventory necesarios para 63 registros en la tabla desktop_inventory_partial_inventory*/
 select * from desktop_inventory where id in (11340,
-11341,11342,11344,11345,
-11346,11348,11349,11351,
-11372,11376,21506,21578);
+11341,
+11342,
+11344,
+11345,
+11346,
+11348,
+11349,
+11351,
+11372,
+11376,
+21506,
+21578,
+28278,
+28279);
 
 
 /*No existe id en tabla internal_location necesaria para 20 registros de la tabla desktop_inventory_partial_inventory*/
-select * from internal_location where id in ('3825',
-'3848','2061','5490','3823','222','223',
-'2380','3812','3603','7552');
+select * from internal_location where id in (222,
+223,
+2061,
+2205,
+2207,
+2228,
+2380,
+3603,
+3812,
+3823,
+3825,
+3848,
+5490,
+7552);
 select * from internal_location where id in (select internal_location from desktop_inventory_partial_inventory where id in (215,
 367,412,415,424,586,587,687,689,693,1932,1933,2417,
 2418,2419,2461,2462,2463,2465,2468));
@@ -1209,7 +1237,7 @@ select element_transfer_order from element_transfer_order_detail where id in (88
 102017,102019,102020,102021,102156,105382,105383,105400);
 
 /*No existe id en tabla internal_location 2761, 3848*/
-select * from internal_location where id in (2761,3848);
+select * from internal_location where id in (2761,3848,2205,2228,2207);
 select distinct internal_location_id from quality_inventory_element where id in (6370,
 6400,6404,6405,31119,31118,31117,31098,33145,33146,33147,
 33148,33149,33150,33151,33152,33153,33154,33155,33156,33157,
