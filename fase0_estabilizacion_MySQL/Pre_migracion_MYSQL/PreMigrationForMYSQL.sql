@@ -278,4 +278,10 @@ update desktop_inventory_partial_inventory set partial_download_user = 'JM103112
 
 update element_transfer_order set direction_location = 'MSCCAR01_TRA' where direction_location = 'MSCCAR01_TRAU';
 
+update desktop_inventory_element set location = 'PLATFORM' where location = 'Platform';
+
+update quality_inventory_element_result set quality_inventory_element = NULL where quality_inventory_element = 0;
+
+update desktop_inventory_element_result set login = 'JG79816117' where login = 'JG79816117 ';
+
 SET SQL_SAFE_UPDATES=1;
