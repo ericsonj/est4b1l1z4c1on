@@ -510,7 +510,7 @@ CREATE TABLE dktp_inv_proc_rslt_miss_dtl (
 
 CREATE TABLE dktp_inv_proc_rslt_nw_dtl (
   id number(11,0) NOT NULL /*AUTO_INCREMENT*/,
-  dktp_inv_elem number(11,0) NOT NULL,
+  dktp_inv_elem number(11,0),
   element number(11,0),
   location varchar2(50) NOT NULL,
   model varchar2(50) NOT NULL,
@@ -3236,4 +3236,23 @@ CREATE TABLE user_password_history(
     password varchar(255),
     register_date timestamp,
     PRIMARY KEY (ID)
+);
+
+CREATE TABLE import_declaration (
+  id number(11) NOT NULL,
+  code varchar(50) DEFAULT NULL,
+  creation_date TIMESTAMP DEFAULT NULL,
+  creation_user varchar(50) DEFAULT NULL,
+  attach_files clob,
+  PRIMARY KEY (id)
+);
+    
+    
+CREATE TABLE import_declaration_element (
+  id NUMBER(11) NOT NULL,
+  import_declaration NUMBER(11) NOT NULL,
+  element NUMBER(11) NOT NULL,
+  assign_date TIMESTAMP DEFAULT NULL,
+  assign_user varchar(50) DEFAULT NULL,
+  PRIMARY KEY (id)
 );

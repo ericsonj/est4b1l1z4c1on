@@ -1823,10 +1823,100 @@ update laicon20f.quality_inventory_element_result_detail set quality_inventory_e
 
 
 /*No esxiste id en la tabla desktop_inventory_element necesaria para 88 regsitros de desktop_inventory_process_result_detail*/
-select * from desktop_inventory_element where id = 1 ;
---ACCION
-update laicon20f.desktop_inventory_process_result_detail set desktop_inventory_element = 2415 where desktop_inventory_element =1;
-
+select * from desktop_inventory_element where id in(292127,292126,292125,292124,292122,292123,292121,292084,292085,292087,292086,292088,292089,292090,292091,
+292093,291907,292094,292096,292095,292097,292098,292099,292100,292101,292102,292103,292104,292105,292106,292107,292109,292108,292110,292112,292111,292114,
+292113,292115,292116,292117,292118,292119,292120,294341,294342,294343,294344,294345,294346,294347,294348,294349,294350,294351,294352,294353,294354,294355,
+294356,294357,294358,294359,294360,294361,294362,294363,294364,294365,294366,294367,294368,294369,294370,294371,294372,294373,294374,294375,294376,294377,
+294378,294379,294380,294381,294382,294383,294384);
+--ACCION	
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292127;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292126;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292125;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292124;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292122;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292123;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292121;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292084;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292085;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292087;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292086;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292088;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292089;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292090;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292091;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292093;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 291907;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292094;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292096;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292095;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292097;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292098;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292099;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292100;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292101;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292102;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292103;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292104;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292105;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292106;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292107;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292109;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292108;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292110;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292112;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292111;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292114;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292113;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292115;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292116;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292117;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292118;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292119;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 292120;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294341;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294342;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294343;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294344;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294345;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294346;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294347;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294348;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294349;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294350;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294351;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294352;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294353;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294354;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294355;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294356;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294357;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294358;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294359;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294360;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294361;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294362;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294363;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294364;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294365;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294366;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294367;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294368;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294369;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294370;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294371;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294372;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294373;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294374;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294375;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294376;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294377;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294378;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294379;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294380;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294381;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294382;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294383;
+update desktop_inventory_process_result_detail set desktop_inventory_element = null where desktop_inventory_element = 294384;
 
 /*no existe id en la tabla desktop_inventory necesario para 900 registros de desktop_inventory_process_result_missing_detail*/
 select * from desktop_inventory where id in (16,
@@ -1861,21 +1951,49 @@ update laicon20f.desktop_inventory_process_result_missing_detail set model = 100
 update laicon20f.desktop_inventory_process_result_missing_detail set model = 1000001 where model = 1001191;
 
 /*no existe id en la tabla internal_location necesaria para 6 registros de la tabla desktop_inventory_process_result_missing_detail*/
-select * from internal_location where id in (2761,
-3603,7552,5093);
+select * from internal_location where id in (2761,2228,2207,2205,3603,7552,5093);
 --ACCION
 update laicon20f.desktop_inventory_process_result_missing_detail set internal_location_id  = 1 where internal_location_id = 2761;
 update laicon20f.desktop_inventory_process_result_missing_detail set internal_location_id  = 1 where internal_location_id = 3603;
 update laicon20f.desktop_inventory_process_result_missing_detail set internal_location_id  = 1 where internal_location_id = 7552;
 update laicon20f.desktop_inventory_process_result_missing_detail set internal_location_id  = 1 where internal_location_id = 5093;
+update laicon20f.desktop_inventory_process_result_missing_detail set internal_location_id  = 1 where internal_location_id = 2228;
+update laicon20f.desktop_inventory_process_result_missing_detail set internal_location_id  = 1 where internal_location_id = 2207;
+update laicon20f.desktop_inventory_process_result_missing_detail set internal_location_id  = 1 where internal_location_id = 2205;
 
 
 /*no existe id en la tabla element_category_asset necesaria para 1 registro de la tabla desktop_inventory_process_result_missing_detail*/
 select * from element_category_asset where id = 236;
 select distinct element_category_asset from desktop_inventory_process_result_missing_detail where id  = 689;
 --ACCION
-
 update laicon20f.desktop_inventory_process_result_missing_detail set element_category_asset  = 166 where element_category_asset = 236;
+
+/*no existe id en la tabla desktop_inventory_process_result_detail necesario para 911 registros de la tabla desktop_inventory_process_result_missing_detail*/
+select * from desktop_inventory_process_result_detail where id in (151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,761,762,763,764,
+765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,1677,1678,1679,1680,1681,1682,1683,1684,1685,1686,
+1687,1688,1689,1690,1691,1692,1693,1694,1695,1696,1697,1698,1699,1700,1701,1702,1703,1704,1705,1706,1707,1708,1709,1710,1711,1712,1713,1714,1715,1716,1717,1718,1719,1720,1721,1722,1723,2971,2972,2973,2974,
+2975,2976,2977,2978,2979,2980,2981,2982,2983,2984,2985,2986,2987,2988,2989,2990,2991,2992,2993,2994,2995,2996,2997,2998,2999,3000,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3048,3049,3050,3051,3052,
+3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3073,3074,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3092,3093,
+3094,3169,3170,3171,3172,3173,3174,3175,3176,3177,3178,3179,3180,3181,3182,3183,3184,3185,3186,3187,3188,3189,3190,3191,3192,3193,3194,3195,3196,3197,3198,3199,3200,3201,3202,3203,3204,3205,3206,3207,3208,
+3209,4205,4206,4207,4208,4209,4210,4211,4212,4213,4214,4215,4216,4230,4231,4232,4233,4234,4235,4236,4237,4238,4239,4240,4241,4555,4556,4554,4553,4552,4551,4550,4549,4548,4547,4546,4545,4544,4543,4542,4541,
+4540,4539,4538,4537,4536,4535,4534,4533,4532,4531,4530,4529,4528,4527,4526,4525,4524,4523,4522,4521,4520,4519,4518,4517,4516,4515,4514,4513,4512,4511,4509,4510,4507,4508,4505,4506,4503,4504,4501,4502,4500,
+4499,4498,4497,4496,4495,4494,4493,4492,4491,4490,4489,4488,4487,4486,4485,4484,4483,4482,4481,4480,4479,4478,4477,4476,4475,4474,4473,4472,4471,4470,4469,4468,4467,4466,4465,4464,4463,4462,5400,5401,5402,
+5403,5404,5405,5406,5407,5408,5409,5410,5411,5412,5413,5414,5415,5416,5417,5418,5419,5420,5421,5422,5423,5424,5425,5426,5427,5428,5429,5430,5431,5432,5433,9293,9294,9295,9296,9297,9298,9299,9300,9301,9302,
+9303,9304,9305,9306,9307,9308,9309,9310,9311,9312,9313,9314,9315,9316,9317,9318,9319,9320,9321,9322,9323,9324,9325,9326,9327,9328,9329,9330,9331,9332,9333,9334,9335,9336,9337,9721,9722,9723,9724,9725,9726,
+9727,9728,9729,9730,9731,9732,9733,9734,9735,9736,9737,9738,9739,9740,9741,9742,9743,9744,9745,9746,9747,9748,9749,9750,9751,9752,9753,9754,9755,9756,9757,9758,9759,9760,9761,9762,9763,9764,9765,9766,9767,
+9768,9769,9770,9771,9772,9773,9774,9775,9776,9777,9778,9871,9872,9873,9874,9875,9876,9877,9878,9879,9880,9881,9882,9883,9884,9885,9886,9887,9888,9889,9890,9891,9892,9893,9894,9895,9896,9897,9898,9899,9900,
+9901,9902,9903,9904,9905,9906,9907,9908,9909,9910,12283,12284,12285,12286,12287,12288,12289,12290,12291,12292,12293,12294,12295,12296,12297,12298,12299,12300,12301,12302,12303,12304,12305,12306,12307,12308,
+12309,12310,12311,12312,12313,12314,12315,12316,12317,12318,12319,12320,12321,12322,12323,16343,16344,16345,16346,16347,16348,16349,16350,16351,16352,16353,16354,16355,16356,16357,16358,16359,16360,16361,
+16362,16363,16364,16365,16366,16367,16368,16369,16370,16371,16372,16373,16374,16375,16376,16377,16378,16379,16380,16381,16382,16383,16384,16385,16386,16756,16757,16758,16759,16760,16761,16762,16763,16764,
+16765,16766,16767,16768,16769,16770,16771,16772,16773,16774,16775,16776,16777,16778,16779,16780,16781,16782,16783,16784,16785,16786,16787,16788,16789,16790,16791,16792,16793,16794,16795,16796,16797,16798,
+16799,16800,16801,16802,17795,17796,17797,17798,17799,17800,17801,17802,17803,17804,17805,17806,17807,17808,17809,17810,17811,17812,17813,17814,17815,17816,17817,17818,17819,17820,17821,17822,17823,17824,
+17825,17826,17827,17828,17829,17830,17831,17832,17833,17834,17835,17836,17837,17838,17839,17840,17841,17842,17843,17912,17913,17914,17915,17916,17917,17918,17919,17920,17921,17922,17923,17924,17925,17926,
+17927,17928,17929,17930,17931,17932,17933,17934,17935,17936,17937,17938,17939,17940,17941,17942,17943,17944,17945,17946,17947,17948,17949,17950,17951,17952,17953,17954,17955,17956,17957,17958,17959,17960,
+17961,17962,17963,17964,17965,17966,17967,17968,18115,18116,18117,18118,18119,18120,18121,18122,18123,18124,18125,18126,18127,18128,18129,18130,18131,18132,18133,18134,18135,18136,18137,18138,18139,18140,
+18141,18142,18143,18144,18145,18146,18147,18148,18149,18150,18151,18152,18153,18154,18155,18156,18157,18158,18159,18160,18161,18162,18163,18164,18165,18166,18167,18168,18169,18170,18171,18172,18173,18174,
+18175,18176,18177,18223,18224,18221,18222,18219,18220,18218,18217,18216,18215,18214,18213,18212,18211,18210,18209,18208,18207,18206,18205,18204,18203,18202,18201,18200);
+--ACCION
+/*se actualizaron por NULL*/
 
 /*No existe id en la tabala element_model necesario para 1050 registros de la tabla desktop_inventory_element*/
 select * from element_model where id in ('1000429','1000585','UNID_VPC_10_AWG_¼','1001191','1001399','1001918',

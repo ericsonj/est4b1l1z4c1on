@@ -284,4 +284,9 @@ update quality_inventory_element_result set quality_inventory_element = NULL whe
 
 update desktop_inventory_element_result set login = 'JG79816117' where login = 'JG79816117 ';
 
+ALTER TABLE `desktop_inventory_process_result_new_detail` 
+CHANGE COLUMN `desktop_inventory_element` `desktop_inventory_element` INT(11) NULL ;
+
+update desktop_inventory_process_result_new_detail set desktop_inventory_element =  NULL where desktop_inventory_element = 0;
+
 SET SQL_SAFE_UPDATES=1;
