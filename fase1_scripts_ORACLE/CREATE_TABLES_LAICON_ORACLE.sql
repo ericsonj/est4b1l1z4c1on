@@ -3256,3 +3256,23 @@ CREATE TABLE import_declaration_element (
   assign_user varchar(50) DEFAULT NULL,
   PRIMARY KEY (id)
 );
+
+CREATE TABLE invoice_elements (
+  id NUMBER(11) NOT NULL,
+  invoice NUMBER(11) DEFAULT NULL,
+  element NUMBER(11) DEFAULT NULL,
+  plu VARCHAR2(50) DEFAULT NULL,
+  location VARCHAR2(50) DEFAULT NULL,
+  serial VARCHAR2(100) DEFAULT NULL,
+  millicom_code VARCHAR2(150) DEFAULT NULL,
+  quantity NUMBER(15,3) DEFAULT NULL,
+  awb NUMBER(11) DEFAULT NULL,
+  contract VARCHAR2(50) DEFAULT NULL,
+  piece_box_stowage VARCHAR2(65) DEFAULT NULL,
+  element_state NUMBER(11) DEFAULT NULL,
+  purchase_order_number VARCHAR2(50) DEFAULT NULL,
+  element_category_asset NUMBER(11) DEFAULT NULL,
+  creation_date TIMESTAMP DEFAULT NULL,
+  login VARCHAR2(50) DEFAULT NULL,
+  PRIMARY KEY (id)
+);
