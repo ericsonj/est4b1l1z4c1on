@@ -30,3 +30,29 @@ SELECT
     WHERE
         ((element_transfer_order.state IN ('SENDED' ,'PREPARED','AUTHORIZED','CREATED')) AND (element_transfer_order_detail.arrived IS NULL) OR (element_transfer_order_detail.arrived = 'N') OR (TRIM(element_transfer_order_detail.arrived) = '')));
     
+
+CREATE 
+    OR REPLACE
+VIEW ViewTotalElements AS
+    SELECT 
+        ec.description AS CATEGORY,
+        et.description AS TYPE,
+        em.description AS MODEL,
+        em.reference AS reference,
+        em.plu AS plu,
+        e.serial AS serial,
+        e.location AS location,
+        e.quantity AS quantity,
+        e.in_movement AS in_movement,
+        l.user_in_charge AS LaiconUserInCharge
+    FROM
+        (((((element e
+        LEFT JOIN invoice i ON ((i.id = e.invoice)))
+        JOIN element_model em ON ((em.id = e.model)))
+        JOIN element_type et ON ((et.id = em.element_type)))
+        JOIN element_category ec ON ((ec.id = et.id_category)))
+        JOIN location l ON ((l.code = e.location)))
+    WHERE
+        ((e.quantity > 0)
+            AND (e.deleted = 'N')
+            AND (NOT ((e.location LIKE '%_NO_ID%'))));
