@@ -3276,3 +3276,14 @@ CREATE TABLE invoice_elements (
   login VARCHAR2(50) DEFAULT NULL,
   PRIMARY KEY (id)
 );
+
+
+CREATE TABLE element_request_transport (
+  request NUMBER(11) DEFAULT NULL,
+  license VARCHAR2(10) DEFAULT NULL,
+  driver_name VARCHAR2(255) DEFAULT NULL,
+  driver_phone VARCHAR2(20) DEFAULT NULL,
+  transporter NUMBER(11) DEFAULT NULL,
+  company VARCHAR2(150) DEFAULT NULL
+);
+
