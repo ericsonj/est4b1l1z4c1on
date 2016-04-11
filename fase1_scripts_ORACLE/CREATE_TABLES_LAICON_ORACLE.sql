@@ -3287,3 +3287,25 @@ CREATE TABLE element_request_transport (
   company VARCHAR2(150) DEFAULT NULL
 );
 
+CREATE TABLE histo_destination_order (
+  id NUMBER(11,0) NOT NULL,
+  type_order VARCHAR2(2) NOT NULL,
+  order_id NUMBER(11,0) DEFAULT NULL,
+  origin VARCHAR2(50) DEFAULT NULL,
+  destination_old VARCHAR2(50) DEFAULT NULL,
+  destination_new VARCHAR2(50) DEFAULT NULL,
+  user_change VARCHAR2(50) DEFAULT NULL,
+  datetime timestamp DEFAULT CURRENT_TIMESTAMP,
+  commen VARCHAR2(500) DEFAULT NULL,
+  PRIMARY KEY (id)
+); 
+
+CREATE TABLE histo_discharged_element (
+  id number(11) NOT NULL,
+  element number(11) DEFAULT NULL,
+  date_discharged timestamp  DEFAULT CURRENT_TIMESTAMP ,
+  date_process timestamp  DEFAULT NULL, /*NOT NULL DEFAULT '0000-00-00 00:00:00'*/
+  commen varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+

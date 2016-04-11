@@ -1,9 +1,9 @@
 /*17-Julio-2015 14:08*/
 
 /* TABLE: additional_attribute*/
-ALTER TABLE additional_attribute
+/*ALTER TABLE additional_attribute
 ADD CONSTRAINT FK_additional_attribute_2
-FOREIGN KEY (element_type) REFERENCES element_type( ID ) NOT DEFERRABLE ;
+FOREIGN KEY (element_type) REFERENCES element_type( ID ) NOT DEFERRABLE ;*/
 
 
 /* TABLE: additional_data*/
@@ -555,7 +555,7 @@ FOREIGN KEY (inventory) REFERENCES inventory( ID ) NOT DEFERRABLE ;
 /* TABLE: element_model*/
 ALTER TABLE element_model
 ADD CONSTRAINT FK_element_model_element473
-FOREIGN KEY (element_type) REFERENCES element_type( ID ) NOT DEFERRABLE ;
+FOREIGN KEY (element_type) REFERENCES 	( ID ) NOT DEFERRABLE ;
 
 ALTER TABLE element_model
 ADD CONSTRAINT FK_element_model_measure477
