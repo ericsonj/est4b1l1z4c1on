@@ -1,0 +1,587 @@
+    public static final String CREATE_TABLE_DESKTOP_VERSION = ""
+            + " CREATE TABLE desktop_version ("
+            + "     version INT "
+            + " )";
+    /*
+     * CREATE PARA TABLA DE CONFIGURACION.
+     */
+    public static final String CREATE_TABLE_CONFIGURATION = ""
+            + " CREATE TABLE configuration("
+            + "     code VARCHAR(250), "
+            + "     value VARCHAR(255), "
+            + "     PRIMARY KEY(code)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA DE ELEMENTOS
+     */
+    public static final String CREATE_TABLE_ELEMENT = ""
+            + " CREATE TABLE element("
+            + "     id INT, "
+            + "     model VARCHAR(150), "
+            + "     serial VARCHAR(250), "
+            + "     quantity DOUBLE, "
+            + "     millicom_code VARCHAR(250), "
+            + "     location VARCHAR(250), "
+            + "     internal_location_id INT, "
+            + "     old_millicom_code VARCHAR(250), "
+            + "     is_asset VARCHAR(1), "
+            + "     element_type_asset INT, "
+            + "     element_category_asset INT, "
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA DE MODELOS
+     */
+    public static final String CREATE_TABLE_MODEL = ""
+            + " CREATE TABLE element_model("
+            + "     id VARCHAR(50), "
+            + "     description VARCHAR(255), "
+            + "     maker VARCHAR(100), "
+            + "     reference VARCHAR(100), "
+            + "     sub_reference VARCHAR(100), "
+            + "     plu VARCHAR(20), "
+            + "     element_type VARCHAR(150), "
+            + "     value_type VARCHAR(20), "
+            + "     is_asset VARCHAR(1), "
+            + "     default_element_type_asset INT, "
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA INVENTARIO
+     */
+    public static final String CREATE_TABLE_INVENTORY = ""
+            + " CREATE TABLE inventory("
+            + "     id INT, "
+            + "     date_download TIMESTAMP, "
+            + "     date_upload TIMESTAMP, "
+            + "     location VARCHAR(250), "
+            + "     login VARCHAR(250), "
+            + "     state INT, "
+            + "     grouping INT, "
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA INVENTARIO ELEMENTO
+     */
+    public static final String CREATE_TABLE_INVENTORY_ELEMENT = ""
+            + " CREATE TABLE inventory_element("
+            + "     id INT, "
+            + "     model VARCHAR(250), "
+            + "     location VARCHAR(250), "
+            + "     internal_location_id INT, "
+            + "     element INT, "
+            + "     inventory INT, "
+            + "     serial VARCHAR(250), "
+            + "     quantity DOUBLE, "
+            + "     millicom_code VARCHAR(250), "
+            + "     is_asset VARCHAR(1), "
+            + "     element_type_asset INT, "
+            + "     element_category_asset INT, "
+            + "     old_millicom_code VARCHAR(250), "
+            + "     inventory_parcial_inventory   INT,"
+            + "     offline	VARCHAR(1) DEFAULT 'N',"
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA DE RESULTADO
+     */
+    public static final String CREATE_TABLE_INVENTORY_ELEMENT_RESULT = ""
+            + " CREATE TABLE inventory_element_result("
+            + "     id INT GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), "
+            + "     inventory_element INT, "
+            + "     element INT, "
+            + "     model VARCHAR(250), "
+            + "     location VARCHAR(250), "
+            + "     inventory INT, "
+            + "     serial VARCHAR(250), "
+            + "     quantity DOUBLE, "
+            + "     millicom_code VARCHAR(250), "
+            + "     is_asset VARCHAR(1), "
+            + "     element_type_asset INT, "
+            + "     element_category_asset INT, "
+            + "     comments VARCHAR(4000), "
+            + "     state INT, "
+            + "     internal_location_id INT DEFAULT 0, "
+            + "     inventory_parcial_inventory   INT,"
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA INVENTARIO X INTERNAL LOCATIONS
+     */
+    public static final String CREATE_TABLE_INVENTORY_INTERNAL_LOCATION = ""
+            + " CREATE TABLE inventory_internal_location("
+            + "     id INT GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), "
+            + "     inventory INT, "
+            + "     internal_location INT, "
+            + "     date TIMESTAMP, "
+            + "     user_responsible VARCHAR(100), "
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA DE USUARIOS
+     */
+    public static final String CREATE_TABLE_USERS = ""
+            + " CREATE TABLE users("
+            + "     login VARCHAR(100), "
+            + "     password VARCHAR(250), "
+            + "     name VARCHAR(250), "
+            + "     PRIMARY KEY(login)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA TIPOS DE ELEMENTOS
+     */
+    public static final String CREATE_TABLE_ELEMENT_TYPE_ASSET = ""
+            + " CREATE TABLE element_type_asset("
+            + "     id INT, "
+            + "     name VARCHAR(150), "
+            + "     default_element_category_asset INT, "
+            + "     investment_item VARCHAR(10), "
+            + "     investment_item_name VARCHAR(150), "
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA PARA LA RELACION DE TIPOS Y MODELOS
+     */
+    public static final String CREATE_TABLE_MODEL_X_TYPE_ASSET = ""
+            + " CREATE TABLE model_x_type_asset("
+            + "     element_model VARCHAR(50), "
+            + "     element_type_asset INT, "
+            + "     PRIMARY KEY(element_model, element_type_asset)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA CATEGORIAS DE ELEMENTOS
+     */
+    public static final String CREATE_TABLE_ELEMENT_CATEGORY_ASSET = ""
+            + " CREATE TABLE element_category_asset("
+            + "     id INT, "
+            + "     name VARCHAR(150), "
+            + "     investment_item VARCHAR(10), "
+            + "     investment_item_name VARCHAR(150), "
+            + "     mic_code_prefix VARCHAR(10), "
+            + "     PRIMARY KEY(id)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA PARA LA RELACION DE CATEGORIAS Y MODELOS
+     */
+    public static final String CREATE_TABLE_MODEL_X_CATEGORY_ASSET = ""
+            + " CREATE TABLE model_x_category_asset("
+            + "     element_model VARCHAR(50), "
+            + "     element_category_asset INT, "
+            + "     PRIMARY KEY(element_model, element_category_asset)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA DE SITIOS, BODEGAS
+     */
+    public static final String CREATE_TABLE_LOCATIONS = ""
+            + " CREATE TABLE location("
+            + "     code VARCHAR(50), "
+            + "     name VARCHAR(150), "
+            + "     PRIMARY KEY(code)"
+            + " )";
+    /*
+     * CREATE PARA LA TABLA DE INTERNAL LOCATIONS
+     */
+    public static final String CREATE_TABLE_INTERNAL_LOCATIONS = ""
+            + " CREATE TABLE internal_location("
+            + "     id INT, "
+            + "     tigo_code VARCHAR(150), "
+            + "     description VARCHAR(4000), "
+            + "     location VARCHAR(50), "
+            + "     PRIMARY KEY(id)"
+            + " )";
+    //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    /**
+     * CREATE PARA LA TABLA DE CARGAS DE ARCHIVO DE TERMINAL.
+     */
+    public static final String CREATE_TABLE_TERMINAL_FILE_LOAD = ""
+            + " CREATE TABLE terminal_file_load ( "
+            + "     id INT GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), "
+            + "     inventory INT, "
+            + "     location VARCHAR(50), "
+            + "     file_name VARCHAR(300), "
+            + "     checksum VARCHAR(100), "
+            + "     load_time TIMESTAMP, "
+            + "     user_login VARCHAR(100), "
+            + "     PRIMARY KEY(id) "
+            + " )";
+    /**
+     * CREATE PARA LA TABLA DE DETALLES DE CARGAS DE ARCHIVO DE TERMINAL.
+     */
+    public static final String CREATE_TABLE_TERMINAL_FILE_LOAD_DETAIL = ""
+            + " CREATE TABLE terminal_file_load_detail ( "
+            + "     id INT GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), "
+            + "     terminal_file_load INT,"
+            + "     element INT, "
+            + "     element_model VARCHAR(250), "
+            + "     serial VARCHAR(250), "
+            + "     millicom_code VARCHAR(250), "
+            + "     location VARCHAR(250), "
+            + "     detail_type VARCHAR(50), "
+            + "     comments VARCHAR(4000), "
+            + "     element_category_asset INT, "
+            + "     changes VARCHAR(4000), "
+            + "     processed INT, "
+            + "     is_asset VARCHAR(1), "
+            + "     element_type_asset INT, "
+            + "     element_state INT, "
+            + "     PRIMARY KEY(id) "
+            + " )";
+    /**
+     * CREATE PARA LA TABLA DE FOTOS DE DETALLES DE CARGAS DE ARCHIVO DE TERMINAL.
+     */
+    public static final String CREATE_TABLE_TERMINAL_FILE_LOAD_DETAIL_PHOTO = ""
+            + " CREATE TABLE terminal_file_load_detail_photo ( "
+            + "     id INT GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), "
+            + "     terminal_file_load_detail INT, "
+            + "     photo_file_name VARCHAR(300), "
+            + "     PRIMARY KEY(id) "
+            + " )";
+    //  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    /**
+     * CREATE PARA LA TABLA DE MODELOS EXCLUIDOS
+     */
+    public static final String CREATE_TABLE_EXCLUDED_MODEL = ""
+            + " CREATE TABLE excluded_model ( "
+            + "     id INT, "
+            + "     desktop_inventory_grouping INT, "
+            + "     element_model VARCHAR(50), "
+            + "     PRIMARY KEY(id)"
+            + " ) ";
+    /**
+     * CREATE PARA LA TABLA DE CAMPOS EXCLUIDOS
+     */
+    public static final String CREATE_TABLE_EXCLUDED_FIELD = ""
+            + " CREATE TABLE excluded_field ( "
+            + "     id INT, "
+            + "     desktop_inventory_grouping INT, "
+            + "     field_code VARCHAR(50), "
+            + "     field_name VARCHAR(50), "
+            + "     PRIMARY KEY(id) "
+            + " ) ";
+    //  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    /**
+     * CREATE PARA TABLA DE PRIVILEGIOS OFFLINE
+     */
+    public static final String CREATE_TABLE_USER_PRIVILEGES = ""
+            + " CREATE TABLE user_x_privilege ( "
+            + "     login VARCHAR(50),"
+            + "     privilege VARCHAR(50)"
+            + " ) ";
+    /**
+     * Script de creación de tabla inventory_terminal_model
+     */
+    public static final String CREATE_TABLE_INVENTORY_TERMINAL_MODEL = ""
+            + "CREATE TABLE inventory_terminal_model("
+            + "    id INT NOT NULL, "
+            + "    element_model   VARCHAR(50)    NOT NULL REFERENCES element_model(id),"
+            + "    enabled VARCHAR(1) NOT NULL"
+            + ")";
+    public static final String CREATE_TABLE_INVENTORY_PARTIAL_INVENTORY = ""
+            + "CREATE TABLE inventory_partial_inventory("
+            + "     id INT NOT NULL PRIMARY KEY, "
+            + "     desktop_inventory   INT NOT NULL REFERENCES inventory(id),"
+            + "     desktop_inventory_admin_warehouse   INT "
+            + "      REFERENCES inventory_admin_warehouse(id),"
+            + "     internal_location   INT,"
+            + "     partial_download_user   VARCHAR(50),"
+            + "     partial_download_date   TIMESTAMP,"
+            + "     partial_upload_user VARCHAR(50),"
+            + "     partial_upload_date     TIMESTAMP,"
+            + "     add_special_elements    VARCHAR(1) DEFAULT 'N'"
+            + ")";
+    public static final String CREATE_TABLE_INVENTORY_ADMIN_WAREHOUSE = ""
+            + "CREATE TABLE inventory_admin_warehouse("
+            + " id INT NOT NULL PRIMARY KEY,"
+            + " warehouse_code varchar(50)"
+            + ")";
+    public static String CREATE_TABLE_INVENTORY_GROUPING = ""
+            + "CREATE TABLE inventory_grouping ("
+            + " id INT NOT NULL PRIMARY KEY,"
+            + " grouping_name VARCHAR(50),"
+            + " description VARCHAR(255),"
+            + " is_active   VARCHAR(1),"
+            + " is_default  VARCHAR(1),"
+            + " restrict_inventory_screen_fields    VARCHAR(1),"
+            + " solve_missing_only_field_service    VARCHAR(1)"
+            + ")";
+    //  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    /*
+     * CREATE PARA INDEX MODEL IN ELEMENT
+     */
+    public static final String CREATE_INDEX_ELEMENT_MODEL =
+            "CREATE INDEX element_model_idx ON element(model)";
+    /*
+     * CREATE PARA INDEX SERIAL IN ELEMENT
+     */
+    public static final String CREATE_INDEX_ELEMENT_SERIAL =
+            "CREATE INDEX element_serial_idx ON element(serial)";
+    /*
+     * CREATE PARA INDEX LOCATION IN ELEMENT
+     */
+    public static final String CREATE_INDEX_ELEMENT_LOCATION =
+            "CREATE INDEX element_location_idx ON element(location)";
+    /*
+     * CREATE PARA INDEX INTERNAL LOCATION IN ELEMENT
+     */
+    public static final String CREATE_INDEX_ELEMENT_INTERNAL_LOCATION =
+            "CREATE INDEX element_internal_location_id_idx ON element(internal_location_id)";
+    /*
+     * CREATE PARA INDEX LOCATION IN INVENTORY
+     */
+    public static final String CREATE_INDEX_INVENTORY_LOCATION =
+            "CREATE INDEX inventory_location_idx ON inventory(location)";
+    /*
+     * CREATE PARA INDEX MILLICOM_CODE IN ELEMENT
+     */
+    public static final String CREATE_INDEX_ELEMENT_MILLICOM_CODE =
+            "CREATE INDEX element_millicom_code_idx ON element(millicom_code)";
+    /*
+     * CREATE PARA INDEX OLD MILLICOM_CODE IN ELEMENT
+     */
+    public static final String CREATE_INDEX_ELEMENT_OLD_MILLICOM_CODE =
+            "CREATE INDEX element_old_millicom_code_idx ON element(old_millicom_code)";
+    /*
+     * CREATE PARA INDEX MODEL IN INVENTORY_ELEMENT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_MODEL =
+            "CREATE INDEX inventory_element_model_idx ON inventory_element(model)";
+    /*
+     * CREATE PARA INDEX LOCATION IN INVENTORY_ELEMENT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_LOCATION =
+            "CREATE INDEX inventory_element_location_idx ON inventory_element(location)";
+    /*
+     * CREATE PARA INDEX INTERNAL LOCATION IN INVENTORY_ELEMENT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_INTERNAL_LOCATION =
+            "CREATE INDEX inventory_element_internal_location_id_idx ON inventory_element(internal_location_id)";
+    /*
+     * CREATE PARA INDEX LOCATION IN INVENTORY_ELEMENT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_ELEMENT =
+            "CREATE INDEX inventory_element_element_idx ON inventory_element(element)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_TYPE_ASSET =
+            "CREATE INDEX inventory_element_type_asset_idx ON inventory_element(element_type_asset)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_CATEGORY_ASSET =
+            "CREATE INDEX inventory_element_category_asset_idx ON inventory_element(element_category_asset)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_IS_ASSET =
+            "CREATE INDEX inventory_element_is_asset_idx ON inventory_element(is_asset)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_OLD_MILLICOM =
+            "CREATE INDEX inventory_element_old_millicom_code_idx ON inventory_element(old_millicom_code)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_PARTIAL_INVENTORY =
+            "CREATE INDEX inventory_element_inventory_partial_inventory_idx ON inventory_element(inventory_parcial_inventory)";
+    /*
+     * CREATE PARA INDEX LOCATION IN INVENTORY_ELEMENT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_INVENTORY =
+            "CREATE INDEX inventory_element_inventory_idx ON inventory_element(inventory)";
+    /*
+     * CREATE PARA INDEX LOCATION IN INVENTORY_ELEMENT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_SERIAL =
+            "CREATE INDEX inventory_element_serial_idx ON inventory_element(serial)";
+    /*
+     * CREATE PARA INDEX LOCATION IN INVENTORY_ELEMENT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_MILLICOM_CODE =
+            "CREATE INDEX inventory_element_millicom_code_idx ON inventory_element(millicom_code)";
+    /*
+     * CREATE PARA INDEX INVENTORY_ELEMENT IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_INVENTORY_ELEMENT =
+            "CREATE INDEX inventory_element_result_inventory_element_idx ON inventory_element_result(inventory_element)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_TYPE_ASSET =
+            "CREATE INDEX inventory_element_result_inventory_type_asset_idx ON inventory_element_result(element_type_asset)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_CATEGORY_ASSET =
+            "CREATE INDEX inventory_element_result_inventory_category_asset_idx ON inventory_element_result(element_category_asset)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_INVENTORY_IS_ASSET =
+            "CREATE INDEX inventory_element_result_inventory_is_asset_idx ON inventory_element_result(is_asset)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_INVENTORY_STATE =
+            "CREATE INDEX inventory_element_result_inventory_state_idx ON inventory_element_result(state)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_INTERNAL_LOCATION =
+            "CREATE INDEX inventory_element_result_inventory_internal_location_idx ON inventory_element_result(internal_location_id)";
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_PARTIAL_INVENTORY =
+            "CREATE INDEX inventory_element_result_inventory_partial_inventory_idx ON inventory_element_result(inventory_parcial_inventory)";
+    /*
+     * CREATE PARA INDEX MODEL IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_MODEL =
+            "CREATE INDEX inventory_element_result_model_idx ON inventory_element_result(model)";
+    /*
+     * CREATE PARA INDEX LOCATION IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_LOCATION =
+            "CREATE INDEX inventory_element_result_location_idx ON inventory_element_result(location)";
+    /*
+     * CREATE PARA INDEX INVENTORY IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_INVENTORY =
+            "CREATE INDEX inventory_element_result_inventory_idx ON inventory_element_result(inventory)";
+    /*
+     * CREATE PARA INDEX SERIAL IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_SERIAL =
+            "CREATE INDEX inventory_element_result_serial_idx ON inventory_element_result(serial)";
+    /*
+     * CREATE PARA INDEX MILLICOM_CODE IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_MILLICOM_CODE =
+            "CREATE INDEX inventory_element_result_millicom_code_idx ON inventory_element_result(millicom_code)";
+    /*
+     * CREATE PARA INDEX ELEMENT IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_ELEMENT =
+            "CREATE INDEX inventory_element_result_element_idx ON inventory_element_result(element)";
+    /*
+     * CREATE PARA INDEX ELEMENT IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_TYPE =
+            "CREATE INDEX inventory_element_result_type_idx ON inventory_element_result(result_type)";
+    /*
+     * CREATE PARA INDEX ELEMENT IN INVENTORY_ELEMENT_RESULT
+     */
+    public static final String CREATE_INDEX_INVENTORY_ELEMENT_RESULT_CONFIRMED =
+            "CREATE INDEX inventory_element_result_confirmed_idx ON inventory_element_result(confirmed)";
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    /*
+     * INDICES PARA terminal_file_load
+     */
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD INVENTORY.
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_INVENTORY =
+            "CREATE INDEX terminal_file_load_inventory_idx ON terminal_file_load(inventory)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD LOCATION
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_LOCATION =
+            "CREATE INDEX terminal_file_load_location_idx ON terminal_file_load(location)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD FILE NAME
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_FILE_NAME =
+            "CREATE INDEX terminal_file_load_file_name_idx ON terminal_file_load(file_name)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD TIME
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_TIME =
+            "CREATE INDEX terminal_file_load_load_time_idx ON terminal_file_load(load_time)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD USER
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_USER =
+            "CREATE INDEX terminal_file_load_user_login_idx ON terminal_file_load(user_login)";
+    /*
+     * INDICES PARA terminal_file_load_detail
+     */
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL LOAD
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_LOAD =
+            "CREATE INDEX terminal_file_load_detail_terminal_file_load_idx ON terminal_file_load_detail(terminal_file_load)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL ELEMENT
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_ELEMENT =
+            "CREATE INDEX terminal_file_load_detail_element_idx ON terminal_file_load_detail(element)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL MODEL
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_MODEL =
+            "CREATE INDEX terminal_file_load_detail_element_model_idx ON terminal_file_load_detail(element_model)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL SERIAL
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_SERIAL =
+            "CREATE INDEX terminal_file_load_detail_serial_idx ON terminal_file_load_detail(serial)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL MIC CODE
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_MIC_CODE =
+            "CREATE INDEX terminal_file_load_detail_millicom_code_idx ON terminal_file_load_detail(millicom_code)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL LOCATION
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_LOCATION =
+            "CREATE INDEX terminal_file_load_detail_location_idx ON terminal_file_load_detail(location)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL TYPE
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_TYPE =
+            "CREATE INDEX terminal_file_load_detail_detail_type_idx ON terminal_file_load_detail(detail_type)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL CATEGORY
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_CATEGORY =
+            "CREATE INDEX terminal_file_load_detail_element_category_asset_idx ON terminal_file_load_detail(element_category_asset)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL CATEGORY
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_PROCESSED =
+            "CREATE INDEX terminal_file_load_detail_processed_idx ON terminal_file_load_detail(processed)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL CATEGORY
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_ASSET =
+            "CREATE INDEX terminal_file_load_detail_is_asset_idx ON terminal_file_load_detail(is_asset)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL CATEGORY
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_TYPE_ASSET =
+            "CREATE INDEX terminal_file_load_detail_element_type_asset_idx ON terminal_file_load_detail(element_type_asset)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL CATEGORY
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_STATE =
+            "CREATE INDEX terminal_file_load_detail_element_state_idx ON terminal_file_load_detail(element_state)";
+    /*
+     * INDICES PARA terminal_file_load_detail_photo
+     */
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL PHOTO DETAIL
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_PHOTO_DETAIL =
+            "CREATE INDEX terminal_file_load_detail_photo_terminal_file_load_detail_idx ON terminal_file_load_detail_photo(terminal_file_load_detail)";
+    /**
+     * CREATE PARA INDEX TERMINAL FILE LOAD DETAIL PHOTO FILE
+     */
+    public static final String CREATE_INDEX_TERMINAL_FILE_LOAD_DETAIL_PHOTO_FILE =
+            "CREATE INDEX terminal_file_load_detail_photo_photo_file_name_idx ON terminal_file_load_detail_photo(photo_file_name)";
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    /*
+     * INDICES PARA CAMPOS Y MODELOS EXCLUIDOS.
+     */
+    /**
+     * CREATE PARA INDEX EXCLUDED FIELD GROUPING.
+     */
+    public static final String CREATE_INDEX_EXCLUDED_FIELD_GROUPING =
+            "CREATE INDEX excluded_field_grouping_idx ON excluded_field(desktop_inventory_grouping)";
+    /**
+     * CREATE PARA INDEX EXCLUDED MODEL GROUPING.
+     */
+    public static final String CREATE_INDEX_EXCLUDED_MODEL_GROUPING =
+            "CREATE INDEX excluded_model_grouping_idx ON excluded_model(desktop_inventory_grouping)";
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    /**
+     * CREATE PARA INDEX USER_PRIV_LOGIN
+     */
+    public static final String CREATE_INDEX_USER_PRIV_LOGIN = " CREATE INDEX user_priv_login_idx ON user_x_privilege(login) ";
+    /**
+     * Creación de índice para la tabla inventory_admin_warehouse
+     */
+    public static final String CREATE_INDEX_INVENTORY_ADMIN_WAREHOUSE = ""
+            + "CREATE INDEX inventory_admin_warehousewhcode_idx ON inventory_admin_warehouse(warehouse_code)";
+    /**
+     * Creación de índices para la tabla inventory_partial_inventory
+     */
+    public static final String CREATE_INDEX_INVENTORY_PARTIAL_INVENTORY_DI_IDX =
+            "CREATE INDEX inventory_partial_inventory_di_idx ON inventory_partial_inventory(desktop_inventory)";
+    public static final String CREATE_INDEX_INVENTORY_PARTIAL_INVENTORY_DIA_WAREHOUSE_IDX =
+            "CREATE INDEX inventory_partial_inventory_diaw_idx ON inventory_partial_inventory(desktop_inventory_admin_warehouse)";
+    public static final String CREATE_INDEX_INVENTORY_PARTIAL_INVENTORY_INT_LOC_IDX =
+            "CREATE INDEX inventory_partial_inventory_iloc_idx ON inventory_partial_inventory(internal_location)";
+

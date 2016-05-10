@@ -3309,3 +3309,16 @@ CREATE TABLE histo_discharged_element (
   PRIMARY KEY (id)
 );
 
+
+CREATE TABLE connection_link (
+  id NUMBER(11),
+  location_a varchar2(50) DEFAULT NULL,
+  location_b varchar2(50) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ;
+
+CREATE TABLE connection_link_provider (
+  id varchar2(50),
+  name varchar2(50) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ;
