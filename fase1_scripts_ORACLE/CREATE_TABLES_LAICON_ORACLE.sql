@@ -699,7 +699,6 @@ CREATE TABLE element (
 /*  KEY element_id_sap_idx (id_sap)*/
 ) /*ENGINE=InnoDB DEFAULT CHARSET=latin1*/;
 
-
 CREATE TABLE element_category (
   id number(11,0) NOT NULL /*AUTO_INCREMENT*/,
   name varchar2(150),
@@ -3322,3 +3321,24 @@ CREATE TABLE connection_link_provider (
   name varchar2(50) DEFAULT NULL,
   PRIMARY KEY (id)
 ) ;
+
+/*RQ100736*/
+alter table element add  id_sap2 varchar2(20);
+alter table element add  subnumber_sap_2 varchar2(20); 
+alter table element add  total_cop_value number(15,3) default 0;
+alter table element add  val_adq_sap_id_sap number(15,3)  default 0;
+alter table element add  val_adq_sap_id_sap_2 number(15,3)  default 0;
+alter table element add  total_val_adq_fa number(15,3)  default 0;
+alter table element add  conciliacion_sap_vs_laicon number(15,3)  default 0;
+
+alter table element_history add  element_deleted varchar(1);
+alter table element_history add  element_id_sap2 varchar(20);
+alter table element_history add  element_subnumber_sap_2 varchar(20); 
+alter table element_history add  element_total_cop_value number(15,3)  default 0;
+alter table element_history add  element_val_adq_sap_id_sap number(15,3)  default 0;
+alter table element_history add  element_val_adq_sap_id_sap_2 number(15,3)  default 0;
+alter table element_history add  element_total_val_adq_fa number(15,3)  default 0;
+alter table element_history add  element_conciliacion_sap_vs_laicon number(15,3)  default 0;
+
+/*RQ97640*/
+ALTER TABLE element ADD  wip_cop_temporal number(15,3) DEFAULT 0;
